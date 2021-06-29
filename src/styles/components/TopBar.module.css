@@ -14,11 +14,14 @@
   width: 15rem;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
-.navBar:first-of-type > button {
-  background: var(--primary-color);
+@media screen and (max-width: 640px) {
+  .navBar button[title="LinkedIn"],
+  .navBar button[title="GitHub"] {
+    display: none;
+  }
 }
 
 .navBar button {
@@ -29,10 +32,6 @@
   border-radius: 6px;
   border-color: transparent;
   cursor: pointer;
-}
-
-.navBar button:hover {
-  opacity: 0.5;
 }
 
 .navBar img {

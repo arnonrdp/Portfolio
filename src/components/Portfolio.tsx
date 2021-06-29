@@ -1,4 +1,5 @@
-import styles from '../styles/components/Portfolio.module.css'
+import styles from '../styles/components/Portfolio.module.css';
+import { Tooltip } from './Tooltip';
 
 type PortfolioProps = {
   image: any;
@@ -21,28 +22,27 @@ export function Portfolio(props: PortfolioProps) {
       <div className={styles.icons}>
         <div className={styles.techs}>
           {props.techs.map((tech, index) => (
+            <Tooltip key={index} label={tech}>
             <img
               key={index}
               src={`${tech}.svg`}
               alt={`${tech} Icon`}
-              title={tech}
             />
+            </Tooltip>
           ))}
         </div>
         <div className={styles.external}>
           {props.github ?
           <a href={props.github} target="_blank">
-            <div className="tooltip">
+            <Tooltip label={"Github"}>
               <img src="/github.svg" alt="Link to GitHub" />
-              <span className="tooltiptext">Github</span>
-            </div>
+            </Tooltip>
           </a>
           : null}
           <a href={props.website} target="_blank">
-            <div className="tooltip">
+            <Tooltip label={"Go to website..."}>
               <img src="/external.svg" alt="Link to Website" />
-              <span className="tooltiptext">Go to website...</span>
-            </div>
+            </Tooltip>
           </a>
         </div>
       </div>

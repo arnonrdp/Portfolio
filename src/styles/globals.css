@@ -41,6 +41,12 @@ main {
   color: var(--info-color);
 }
 
+@media screen and (max-width: 640px) {
+  #about h2 {
+    font-size: 2.5rem;
+  }
+}
+
 #about p:first-of-type {
   margin: 0;
   font-size: 1.2rem;
@@ -65,46 +71,4 @@ section .flexCards {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-}
-
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  font-size: 0.8rem;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-  top: 110%;
-  left: 50%;
-  margin-left: -60px;
-  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
-  opacity: 0;
-  transition: opacity 0.6s;
-}
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent black transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
 }

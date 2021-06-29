@@ -1,6 +1,6 @@
-import { Topbar } from '../components/Topbar'
-import { Portfolio } from '../components/Portfolio'
-import { portfolios } from '../data/portfolios'
+import { Topbar } from '../components/Topbar';
+import { Portfolio } from '../components/Portfolio';
+import { portfolios } from '../data/portfolios';
 
 export default function Home() {
   return (
@@ -20,6 +20,7 @@ export default function Home() {
         <div className="flexCards">
           {portfolios.map((p, index) => (
             <Portfolio
+              key={index}
               image={p.image}
               title={p.title}
               description={p.description}

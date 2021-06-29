@@ -6,10 +6,10 @@ type ButtonProps = {
 
 export function Button(props: ButtonProps) {
   return (
-    <a href={props.link} target="_blank">
-      <button title={props.title}>
+    <button title={props.title}>
+      <a href={props.link} target="_blank">
         <img src={props.image} />
-      </button>
-    </a>
+      </a>
+    </button>
   )
 }
