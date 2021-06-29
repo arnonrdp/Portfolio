@@ -44,14 +44,13 @@ export function Portfolio(props: PortfolioProps) {
               <a href={props.github} target="_blank" rel="noreferrer">
                 <Tooltip label={"GitHub"}>
                   <Image
-                    src="/GitHub.svg"
+                    src="/github.svg"
                     alt="Link to GitHub"
                     width={30}
                     height={30}
                   />
                 </Tooltip>
-              </a>
-              : null}
+              </a> : null}
             <a href={props.website} target="_blank" rel="noreferrer noopener">
               <Tooltip label={"Go to website..."}>
                 <Image
@@ -65,7 +64,6 @@ export function Portfolio(props: PortfolioProps) {
             </a>
           </div>
         </div>
-
       </div>
     </article>
   )

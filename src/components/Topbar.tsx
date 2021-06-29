@@ -32,7 +32,7 @@ export function Topbar() {
         <Button
           link={"https://github.com/arnonrdp"}
           title={"GitHub"}
-          image={'/GitHub.svg'}
+          image={'/github.svg'}
         />
       </nav>
     </header>
