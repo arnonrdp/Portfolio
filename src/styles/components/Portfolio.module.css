@@ -12,13 +12,17 @@
   transform: scale(1.05);
 }
 
-.portfolioImage img {
+.portfolioImage {
   max-width: 100%;
   border-radius: 12px 12px 0 0;
 }
 
 .portfolioDetails {
-  padding: 0 1rem;
+  padding: 1rem;
+}
+
+.portfolioDetails h4 {
+  margin-top: 0;
 }
 
 .portfolioDetails p {
@@ -28,15 +32,12 @@
 .icons {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem;
 }
 
-.icons .tech {
-  display: flex;
-  align-items: center;
+.icons .techs > div {
+  margin-right: 1rem;
 }
 
-.icons img {
-  width: 30px;
-  margin: 0 0.5rem;
+.icons .external > a {
+  margin-left: 1rem;
 }

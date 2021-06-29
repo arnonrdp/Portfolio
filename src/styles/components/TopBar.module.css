@@ -5,8 +5,7 @@
   margin-bottom: 3rem;
 }
 
-.topBar > img {
-  width: 6rem;
+.topBar .avatar {
   border-radius: 50%;
 }
 

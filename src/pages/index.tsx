@@ -9,13 +9,13 @@ export default function Home() {
         <Topbar />
         <p>👋🏼 Hi, my name is</p>
         <h1>Arnon Rodrigues</h1>
-        <h2>I build things for<br/>the web and mobile.</h2>
+        <h2>I build things for<br />the web and mobile.</h2>
         <p>I am brazilian 🇧🇷 and a front-end developer who loves to apply technology to solve problems. I have experience in websites with UX/UI design, SEO best practice and agile methodology with SCRUM. I am communicative, dedicated and always interested in learning new technologies and improving my skills.</p>
       </section>
       <section id="portfolio">
         <div className="description">
           <h3>🧳 Portfolio</h3>
-          <p>Some projects that I've built and maintain</p>
+          <p>Some projects that I have built and maintain</p>
         </div>
         <div className="flexCards">
           {portfolios.map((p, index) => (

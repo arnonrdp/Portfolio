@@ -14,8 +14,6 @@ export default class MyDocument extends Document {
           <meta property="og:site_name" content="Arnon.developer" />
           <meta property="og:description" content="Portfolio, side projects, the blog of the Arnon Rodrigues de Paula and among other things" />
           <meta property="og:url" content="https://www.arnon.dev/" />
-
-          <title>Arnon.developer</title>
         </Head>
         <body>
           <Main />
