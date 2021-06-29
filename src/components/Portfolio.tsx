@@ -1,5 +1,7 @@
-import styles from '../styles/components/Portfolio.module.css';
+/* eslint-disable @next/next/no-img-element */
 import { Tooltip } from './Tooltip';
+import styles from '../styles/components/Portfolio.module.css';
+import Image from 'next/image';
 
 type PortfolioProps = {
   image: any;
@@ -13,7 +15,7 @@ export function Portfolio(props: PortfolioProps) {
   return (
     <article className={styles.articles}>
       <div className={styles.portfolioImage}>
-        <img src={props.image} alt={`${props.title} Image`} />
+        <Image src={props.image} alt={`${props.title} Image`} />
       </div>
       <div className={styles.portfolioDetails}>
         <h4>{props.title}</h4>
@@ -23,23 +25,24 @@ export function Portfolio(props: PortfolioProps) {
         <div className={styles.techs}>
           {props.techs.map((tech, index) => (
             <Tooltip key={index} label={tech}>
+              <div>
             <img
-              key={index}
               src={`${tech}.svg`}
               alt={`${tech} Icon`}
             />
+            </div>
             </Tooltip>
           ))}
         </div>
         <div className={styles.external}>
           {props.github ?
-          <a href={props.github} target="_blank">
+          <a href={props.github} target="_blank" rel="noreferrer">
             <Tooltip label={"Github"}>
               <img src="/github.svg" alt="Link to GitHub" />
             </Tooltip>
           </a>
           : null}
-          <a href={props.website} target="_blank">
+          <a href={props.website} target="_blank" rel="noreferrer">
             <Tooltip label={"Go to website..."}>
               <img src="/external.svg" alt="Link to Website" />
             </Tooltip>
