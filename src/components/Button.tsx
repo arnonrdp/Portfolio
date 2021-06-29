@@ -1,5 +1,4 @@
 type ButtonProps = {
-  children?: any;
   link?: string;
   title?: string;
   image?: any;

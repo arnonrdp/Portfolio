@@ -1,0 +1,42 @@
+.articles {
+  max-width: 25rem;
+  margin: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+  border-radius: 12px;
+  transition: all .2s ease 0s;
+}
+
+.articles:hover {
+  transform: scale(1.05);
+}
+
+.portfolioImage img {
+  max-width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+
+.portfolioDetails {
+  padding: 0 1rem;
+}
+
+.portfolioDetails p {
+  font-size: 0.8rem;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.icons .tech {
+  display: flex;
+  align-items: center;
+}
+
+.icons img {
+  width: 30px;
+  margin: 0 0.5rem;
+}

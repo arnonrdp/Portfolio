@@ -1,21 +1,23 @@
 import { Button } from './Button'
+import styles from '../styles/components/TopBar.module.css'
 
-type TopbarProps = {
-  children?: any;
-  link?: string;
-  title?: string;
-  image?: any;
-}
-
-export function Topbar(props: TopbarProps) {
+export function Topbar() {
   return (
-    <header>
+    <header className={styles.topBar}>
       <img src="me.jpg" alt="Arnon Rodrigues" />
 
-      <nav>
+      <nav className={styles.navBar}>
         <button>get in touch</button>
-        <Button link={"https://linkedin.com/in/arnonrdp"} title={"LinkedIn"} image={"linkedin.svg"} />
-        <Button link={"https://github.com/arnonrdp"} title={"GitHub"} image={'github.svg'} />
+        <Button
+          link={"https://linkedin.com/in/arnonrdp"}
+          title={"LinkedIn"}
+          image={"linkedin.svg"}
+        />
+        <Button
+          link={"https://github.com/arnonrdp"}
+          title={"GitHub"}
+          image={'github.svg'}
+        />
       </nav>
     </header>
   )

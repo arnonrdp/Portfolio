@@ -1,0 +1,40 @@
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.topBar > img {
+  width: 6rem;
+  border-radius: 50%;
+}
+
+.navBar {
+  width: 15rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.navBar:first-of-type > button {
+  background: var(--primary-color);
+}
+
+.navBar button {
+  background-color: transparent;
+  transition: all 250ms ease 0s;
+  outline: transparent solid 2px;
+  outline-offset: 2px;
+  border-radius: 6px;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.navBar button:hover {
+  opacity: 0.5;
+}
+
+.navBar img {
+  width: 2rem;
+}
