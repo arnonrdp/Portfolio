@@ -1,5 +1,6 @@
 .articles {
-  max-width: 25rem;
+  flex: 25%;
+  max-width: 30%;
   margin: 1rem 0.5rem;
   display: flex;
   flex-direction: column;
@@ -13,7 +14,8 @@
 }
 
 .portfolioImage {
-  max-width: 100%;
+  max-width: 100% !important;
+  height: auto !important;
   border-radius: 12px 12px 0 0;
 }
 
@@ -40,4 +42,63 @@
 
 .icons .external > a {
   margin-left: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .articles {
+    flex: 45%;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 720px) {
+  .articles {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .articles > div:first-child {
+    height: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .articles > div:first-child {
+    height: 250px;
+  }
+}
+
+@media (max-width: 540px) {
+  .articles > div:first-child {
+    height: auto;
+  }
+}
+
+@media (max-width: 350px) {
+  .icons .techs > div {
+    margin-right: 0.5rem;
+  }
+  .icons .techs > div > div > div {
+    width: 25px;
+  }
+  .icons .external > a {
+    margin-left: 0.5rem;
+  }
+  .icons .external > a > div > div > div {
+    width: 25px;
+  }
+}
+
+@media (max-width: 280px) {
+  .icons .techs > div {
+    margin-right: 0.5rem;
+  }
+  .icons .techs > div > div > div {
+    width: 20px;
+  }
+  .icons .external > a {
+    margin-left: 0.5rem;
+  }
+  .icons .external > a > div > div > div {
+    width: 20px;
+  }
 }

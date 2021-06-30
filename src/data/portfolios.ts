@@ -29,5 +29,15 @@ export const portfolios = [
     techs: ["NextJS", "React", "Vercel"],
     github: "https://github.com/arnonrdp/portfolio",
     website: "https://arnon.dev"
-  },
-]
+  }
+];
+
+export const volunteer = [
+  {
+    image: "/byarcadia.png",
+    title: "By Arcadia",
+    description: "Arcadia Is an Form of Utopia For People  Who Are Interested In Every Aspect of Art.",
+    techs: ["Wix"],
+    website: "https://www.byarcadia.org"
+  }
+];

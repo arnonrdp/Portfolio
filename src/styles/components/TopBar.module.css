@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 3rem;
+  margin: 3rem 0;
 }
 
 .topBar .avatar {
@@ -14,13 +14,6 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
-}
-
-@media screen and (max-width: 640px) {
-  .navBar button[title="LinkedIn"],
-  .navBar button[title="GitHub"] {
-    display: none;
-  }
 }
 
 .navBar button {
@@ -35,4 +28,19 @@
 
 .navBar img {
   width: 2rem;
+}
+
+@media screen and (max-width: 450px) {
+  .topBar > div > div > img {
+    width: 100px;
+  }
+  .navBar > div:last-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .navBar button > a > div {
+    width: 25px;
+  }
 }

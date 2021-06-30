@@ -17,8 +17,9 @@ export function Portfolio(props: PortfolioProps) {
       <Image
         src={props.image}
         alt={`${props.title} Image`}
-        width={400}
-        height={200}
+        width={343}
+        height={220}
+        layout="intrinsic"
         className={styles.portfolioImage}
       />
       <div className={styles.portfolioDetails}>
@@ -28,14 +29,12 @@ export function Portfolio(props: PortfolioProps) {
           <div className={styles.techs}>
             {props.techs.map((tech, index) => (
               <Tooltip key={index} label={tech}>
-                <div>
                   <Image
                     src={`/${tech}.svg`}
                     alt={`${tech} Icon`}
                     width={30}
                     height={30}
                   />
-                </div>
               </Tooltip>
             ))}
           </div>

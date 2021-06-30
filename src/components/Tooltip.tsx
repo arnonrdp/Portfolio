@@ -9,7 +9,7 @@ export function Tooltip(props: TootiplProps) {
   return (
     <div className={styles.tooltip}>
       {props.children}
-      <span className={styles.tooltiptext}>{props.label}</span>
+      <span className={styles.tooltipText}>{props.label}</span>
     </div>
   )
 }
