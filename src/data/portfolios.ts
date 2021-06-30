@@ -17,7 +17,7 @@ export const portfolios = [
   {
     image: "/multi-converter.png",
     title: "Multi Converter",
-    description: "A single-page application for tracking all stock options in the Brazilian financial market.",
+    description: "A multiple temperature, length and time converter. It was the final work of a Computer Science course.",
     techs: ["Javascript", "Vercel"],
     github: "https://github.com/arnonrdp/Multi-Converter",
     website: "https://multi-converter.vercel.app"
@@ -36,7 +36,7 @@ export const volunteer = [
   {
     image: "/byarcadia.png",
     title: "By Arcadia",
-    description: "Arcadia Is an Form of Utopia For People  Who Are Interested In Every Aspect of Art.",
+    description: "Arcadia is a form of utopia for people who are interested in every aspect of art.",
     techs: ["Wix"],
     website: "https://www.byarcadia.org"
   }
