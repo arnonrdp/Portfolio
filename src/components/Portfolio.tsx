@@ -30,7 +30,7 @@ export function Portfolio(props: PortfolioProps) {
             {props.techs.map((tech, index) => (
               <Tooltip key={index} label={tech}>
                   <Image
-                    src={`/${tech}.svg`}
+                    src={`/icons/${tech}.svg`}
                     alt={`${tech} Icon`}
                     width={30}
                     height={30}
@@ -43,8 +43,8 @@ export function Portfolio(props: PortfolioProps) {
               <a href={props.github} target="_blank" rel="noreferrer">
                 <Tooltip label={"GitHub"}>
                   <Image
-                    src="/github.svg"
-                    alt="Link to GitHub"
+                    src="/icons/github.svg"
+                    alt="GitHub Icon"
                     width={30}
                     height={30}
                   />
@@ -53,8 +53,8 @@ export function Portfolio(props: PortfolioProps) {
             <a href={props.website} target="_blank" rel="noreferrer noopener">
               <Tooltip label={"Go to website..."}>
                 <Image
-                  src="/external.svg"
-                  alt="Link to Website"
+                  src="/icons/external.svg"
+                  alt="Go to external website icon"
                   width={30}
                   height={30}
                   className={styles.iconsImage}

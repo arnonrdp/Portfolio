@@ -18,25 +18,25 @@ export function Topbar() {
         <Tooltip label="E-mail">
           <Button
             link={"mailto:arnonrdp@gmail.com"}
-            image={"/email.svg"}
+            image={"/icons/email.svg"}
           />
         </Tooltip>
         <Tooltip label="WhatsApp">
           <Button
             link={"https://wa.me/5521971111312"}
-            image={"/whatsapp.svg"}
+            image={"/icons/whatsapp.svg"}
           />
         </Tooltip>
         <Tooltip label="LinkedIn">
           <Button
             link={"https://linkedin.com/in/arnonrdp"}
-            image={"/linkedin.svg"}
+            image={"/icons/linkedin.svg"}
           />
         </Tooltip>
         <Tooltip label="GitHub">
           <Button
             link={"https://github.com/arnonrdp"}
-            image={'/github.svg'}
+            image={'/icons/github.svg'}
           />
         </Tooltip>
       </nav>

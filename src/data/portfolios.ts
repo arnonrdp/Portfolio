@@ -1,21 +1,21 @@
 export const portfolios = [
   {
-    image: "/virtual-bookshelf.png",
+    image: "/portfolio/virtual-bookshelf.jpg",
     title: "Virtual Bookshelf",
-    description: "A personal virtual bookshelf with books you've read and books you want to read. (personal project not yet finished)",
-    techs: ["Python", "Flask", "Heroku"],
+    description: "A virtual bookshelf with books you've read and books you want to read. (project not yet finished)",
+    techs: ["Python", "Flask", "SQLite", "Heroku"],
     github: "https://github.com/arnonrdp/Estante-Virtual",
     website: "http://minha-estante-virtual.herokuapp.com"
   },
   {
-    image: "/myoption.png",
+    image: "/portfolio/myoption.jpg",
     title: "My Option",
     description: "A single-page application for tracking all stock options in the Brazilian financial market.",
     techs: ["jQuery", "Bootstrap", "MySQL", "PHP"],
     website: "http://myoption.com.br"
   },
   {
-    image: "/multi-converter.png",
+    image: "/portfolio/multi-converter.jpg",
     title: "Multi Converter",
     description: "A multiple temperature, length and time converter. It was the final work of a Computer Science course.",
     techs: ["Javascript", "Vercel"],
@@ -23,7 +23,7 @@ export const portfolios = [
     website: "https://multi-converter.vercel.app"
   },
   {
-    image: "/personal-portfolio.png",
+    image: "/portfolio/personal-portfolio.jpg",
     title: "Personal Portfolio",
     description: "Personal portfolio page to present my personal, professional and volunteer work and my contact details.",
     techs: ["NextJS", "React", "Vercel"],
@@ -34,7 +34,7 @@ export const portfolios = [
 
 export const volunteer = [
   {
-    image: "/byarcadia.png",
+    image: "/portfolio/byarcadia.jpg",
     title: "By Arcadia",
     description: "Arcadia is a form of utopia for people who are interested in every aspect of art.",
     techs: ["Wix"],
