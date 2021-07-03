@@ -17,8 +17,8 @@ export function Portfolio(props: PortfolioProps) {
       <Image
         src={props.image}
         alt={`${props.title} Image`}
-        width={343}
-        height={220}
+        width={400}
+        height={233}
         layout="intrinsic"
         className={styles.portfolioImage}
       />
