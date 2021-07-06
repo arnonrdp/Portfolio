@@ -3,7 +3,7 @@ export const portfolios = [
     image: "/portfolio/virtual-bookshelf.jpg",
     title: "Virtual Bookshelf",
     description: "A virtual bookshelf with books you've read and books you want to read. (project not yet finished)",
-    techs: ["Python", "Flask", "SQLite", "Heroku"],
+    techs: ["Python", "Flask", "Heroku"],
     github: "https://github.com/arnonrdp/Estante-Virtual",
     website: "http://minha-estante-virtual.herokuapp.com"
   },
