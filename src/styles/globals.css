@@ -5,6 +5,37 @@
   font-size: 16px;
 }
 
+@media (max-width: 720px) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 540px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 280px) {
+  :root {
+    font-size: 8px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -45,13 +76,4 @@ footer {
   align-items: center;
   justify-content: space-between;
   font-size: 0.9rem;
-}
-
-@media (max-width: 540px) {
-  section .description h3 {
-    font-size: 7vw;
-  }
-  section .description p {
-    font-size: 4vw;
-  }
 }
