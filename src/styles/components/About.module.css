@@ -20,16 +20,8 @@
   line-height: 1.35rem;
 }
 
-@media (max-width: 540px) {
-  #about h1,
-  #about h2 {
-    font-size: 9vw;
-  }
-}
-
 @media (max-width: 460px) {
   #about p.description {
-    font-size: 0.9rem;
     width: 100%;
   }
 }
