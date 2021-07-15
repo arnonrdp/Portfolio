@@ -20,6 +20,13 @@ export default class MyDocument extends Document {
           <meta property="og:site_name" content="Arnon.developer" />
           <meta property="og:description" content="Portfolio, side projects, the blog of the Arnon Rodrigues de Paula and among other things" />
           <meta property="og:url" content="https://www.arnon.dev/" />
+          <meta property="og:image" content="https://www.arnon.dev/portfolio/personal-portfolio.jpg" />
+          <meta property="og:image:width" content="400" />
+          <meta property="og:image:height" content="233" />
+          <meta name="twitter:creator" content="@arnonrdp" />
+          <meta name="twitter:site" content="@arnonrdp" />
+          <meta name="twitter:card" content="summary_image" />
+          <meta name="twitter:image" content="https://www.arnon.dev/portfolio/personal-portfolio.jpg" />
         </Head>
         <body>
           <Main />
