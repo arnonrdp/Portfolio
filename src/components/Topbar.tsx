@@ -7,7 +7,7 @@ export function Topbar() {
   return (
     <header className={styles.topBar}>
       <Image
-        src="/me.jpg"
+        src="/logo.png"
         alt="Arnon Rodrigues"
         width={120}
         height={120}
