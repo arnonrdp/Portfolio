@@ -28,6 +28,7 @@ export default class MyDocument extends Document {
           <meta name="twitter:site" content="@arnonrdp" />
           <meta name="twitter:card" content="summary_image" />
           <meta name="twitter:image" content="https://www.arnon.dev/portfolio/personal-portfolio.jpg" />
+          <script async src="https://cdn.splitbee.io/sb.js"></script>
         </Head>
         <body>
           <Main />
