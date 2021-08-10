@@ -29,12 +29,12 @@ export function Portfolio(props: PortfolioProps) {
           <div className={styles.techs}>
             {props.techs.map((tech, index) => (
               <Tooltip key={index} label={tech}>
-                  <Image
-                    src={`/icons/${tech}.svg`}
-                    alt={`${tech} Icon`}
-                    width={30}
-                    height={30}
-                  />
+                <Image
+                  src={`/icons/${tech}.svg`}
+                  alt={`${tech} Icon`}
+                  width={25}
+                  height={25}
+                />
               </Tooltip>
             ))}
           </div>
@@ -45,8 +45,8 @@ export function Portfolio(props: PortfolioProps) {
                   <Image
                     src="/icons/github.svg"
                     alt="GitHub Icon"
-                    width={30}
-                    height={30}
+                    width={25}
+                    height={25}
                   />
                 </Tooltip>
               </a> : null}
@@ -55,8 +55,8 @@ export function Portfolio(props: PortfolioProps) {
                 <Image
                   src="/icons/external.svg"
                   alt="Go to external website icon"
-                  width={30}
-                  height={30}
+                  width={25}
+                  height={25}
                   className={styles.iconsImage}
                 />
               </Tooltip>

@@ -5,10 +5,10 @@ import '../styles/globals.css';
 function MyApp({ Component, pageProps }) {
   return (
     <>
-    <Head>
+      <Head>
         <title>Arnon.developer</title>
-    </Head>
-    <Component {...pageProps} />
+      </Head>
+      <Component {...pageProps} />
     </>
   )
 }

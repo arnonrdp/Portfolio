@@ -6,12 +6,11 @@
   flex-direction: column;
   background-color: darkseagreen;
   border-radius: 12px;
-  transition: all .2s ease 0s;
+  transition: all .2s;
 }
 
 .articles:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .portfolioImage {
@@ -29,12 +28,18 @@
 }
 
 .portfolioDetails p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .icons {
   display: flex;
   justify-content: space-between;
+  filter: grayscale(100%);
+}
+
+.icons:hover {
+  cursor: pointer;
+  filter: none;
 }
 
 .icons .techs > div {

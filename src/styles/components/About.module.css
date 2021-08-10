@@ -4,13 +4,13 @@
 }
 
 #about h1 {
-  font-size: 3rem;
+  font-size: 2.9rem;
   margin: 0;
 }
 
 #about h2 {
   margin: 0;
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: var(--info-color);
 }
 
