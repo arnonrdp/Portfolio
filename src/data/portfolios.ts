@@ -23,6 +23,14 @@ export const portfolios = [
     website: "https://multi-converter.vercel.app"
   },
   {
+    image: "/portfolio/qrcode-generator.jpg",
+    title: "QRCode Generator",
+    description: "A real-time QRCode generator. Type, wait and see.",
+    techs: ["Vue", "CSS", "Vercel"],
+    github: "https://github.com/arnonrdp/QRCode-Generator",
+    website: "https://codeqr.vercel.app"
+  },
+  {
     image: "/portfolio/personal-portfolio.jpg",
     title: "Personal Portfolio",
     description: "Personal page to present my professional and volunteer work and my contact details.",

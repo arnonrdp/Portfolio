@@ -1,7 +1,7 @@
 .articles {
   flex: 25%;
   max-width: 30%;
-  margin: 1rem 0.5rem;
+  margin: 1rem 1rem;
   display: flex;
   flex-direction: column;
   background-color: darkseagreen;
