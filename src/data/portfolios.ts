@@ -34,7 +34,7 @@ export const portfolios = [
     image: "/portfolio/personal-portfolio.jpg",
     title: "Personal Portfolio",
     description: "Personal page to present my professional and volunteer work and my contact details.",
-    techs: ["NextJS", "React", "Vercel"],
+    techs: ["NextJS", "React", "Typescript"],
     github: "https://github.com/arnonrdp/portfolio",
     website: "https://arnon.dev"
   }
