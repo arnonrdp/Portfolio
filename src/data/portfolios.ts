@@ -1,9 +1,9 @@
 export const portfolios = [
   {
     image: "/portfolio/virtual-bookshelf.jpg",
-    title: "Virtual Bookshelf",
+    title: "Livrero",
     description: "A virtual bookshelf with books you've read and books you want to read.",
-    techs: ["Python", "Flask", "Heroku"],
+    techs: ["Vue", "Firebase", "Vercel"],
     github: "https://github.com/arnonrdp/Estante-Virtual",
     website: "http://minha-estante-virtual.herokuapp.com"
   },
