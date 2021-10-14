@@ -1,11 +1,19 @@
 export const portfolios = [
   {
+    image: "/portfolio/bot-deschamps.jpg",
+    title: "Bot Deschamps Newsletter",
+    description: "A Bot that reads Filipe Deschamps' Newsletter and turns each news into a Tweet.",
+    techs: ["Python", "Gmail", "Twitter"],
+    github: "https://github.com/arnonrdp/Bot-Deschamps-Newsletter",
+    website: "https://twitter.com/BotDeschamps"
+  },
+  {
     image: "/portfolio/virtual-bookshelf.jpg",
     title: "Livrero",
     description: "A virtual bookshelf with books you've read and books you want to read.",
     techs: ["Vue", "Firebase", "Vercel"],
     github: "https://github.com/arnonrdp/Estante-Virtual",
-    website: "http://minha-estante-virtual.herokuapp.com"
+    website: "https://livrero.vercel.app"
   },
   {
     image: "/portfolio/myoption.jpg",
@@ -46,6 +54,6 @@ export const volunteer = [
     title: "By Arcadia",
     description: "Arcadia is a form of utopia for people who are interested in every aspect of art.",
     techs: ["Wix"],
-    website: "https://www.byarcadia.org"
+    website: "https://byarcadia.org"
   }
 ];
