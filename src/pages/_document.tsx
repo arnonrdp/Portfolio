@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 export default class MyDocument extends Document {
   render() {
@@ -14,12 +14,12 @@ export default class MyDocument extends Document {
           <meta name="msapplication-TileColor" />
           <meta name="theme-color" content="#ffffff" />
 
-          <meta name="description" content="Portfolio, side projects, the blog of the Arnon Rodrigues de Paula and among other things" />
+          <meta name="description" content="Portfolio, side projects and contact of Arnon Rodrigues de Paula" />
           <meta property="og:locale" content="en" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Arnon Rodrigues de Paula Portfolio" />
           <meta property="og:site_name" content="Arnon.developer" />
-          <meta property="og:description" content="Portfolio, side projects, the blog of the Arnon Rodrigues de Paula and among other things" />
+          <meta property="og:description" content="Portfolio, side projects and contact of Arnon Rodrigues de Paula" />
           <meta property="og:url" content="https://arnon.dev/" />
           <meta property="og:image" content="https://arnon.dev/portfolio/personal-portfolio.jpg" />
           <meta property="og:image:width" content="400" />
@@ -35,6 +35,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
