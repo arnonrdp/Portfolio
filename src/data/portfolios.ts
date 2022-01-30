@@ -5,22 +5,22 @@ export const portfolios = [
     description: "A Bot that reads Filipe Deschamps' Newsletter and turns each news into a Tweet.",
     techs: ["Python", "Gmail", "Twitter"],
     github: "https://github.com/arnonrdp/Bot-Deschamps-Newsletter",
-    website: "https://twitter.com/BotDeschamps"
+    website: "https://twitter.com/BotDeschamps",
   },
   {
     image: "/portfolio/virtual-bookshelf.jpg",
     title: "Livrero",
     description: "A virtual bookshelf with books you've read and books you want to read.",
-    techs: ["Vue", "Firebase", "Vercel"],
+    techs: ["Vue", "Quasar", "Firebase"],
     github: "https://github.com/arnonrdp/Estante-Virtual",
-    website: "https://livrero.vercel.app"
+    website: "https://livrero.vercel.app",
   },
   {
     image: "/portfolio/myoption.jpg",
     title: "My Option",
     description: "A single-page application for tracking all stock options in the Brazilian financial market.",
-    techs: ["jQuery", "Bootstrap", "MySQL", "PHP"],
-    website: "http://myoption.com.br"
+    techs: ["jQuery", "Bootstrap", "PHP", "MySQL"],
+    website: "http://myoption.com.br",
   },
   {
     image: "/portfolio/multi-converter.jpg",
@@ -28,7 +28,7 @@ export const portfolios = [
     description: "A multiple temperature, length and time converter.",
     techs: ["Vue", "Javascript", "Vercel"],
     github: "https://github.com/arnonrdp/Multi-Converter",
-    website: "https://multi-converter.vercel.app"
+    website: "https://multi-converter.vercel.app",
   },
   {
     image: "/portfolio/qrcode-generator.jpg",
@@ -36,7 +36,7 @@ export const portfolios = [
     description: "A real-time QRCode generator. Type, wait and see.",
     techs: ["Vue", "CSS", "Vercel"],
     github: "https://github.com/arnonrdp/QRCode-Generator",
-    website: "https://codeqr.vercel.app"
+    website: "https://codeqr.vercel.app",
   },
   {
     image: "/portfolio/personal-portfolio.jpg",
@@ -44,8 +44,8 @@ export const portfolios = [
     description: "Personal page to present my professional and volunteer work and my contact details.",
     techs: ["NextJS", "React", "Typescript"],
     github: "https://github.com/arnonrdp/portfolio",
-    website: "https://arnon.dev"
-  }
+    website: "https://arnon.dev",
+  },
 ];
 
 export const volunteer = [
