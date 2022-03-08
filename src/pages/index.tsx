@@ -1,8 +1,8 @@
-import React from 'react';
-import { Topbar } from '../components/Topbar';
-import { About } from '../components/About';
-import { Portfolio } from '../components/Portfolio';
-import { portfolios, volunteer } from '../data/portfolios';
+import React from "react";
+import { Topbar } from "../components/Topbar";
+import { About } from "../components/About";
+import { Portfolio } from "../components/Portfolio";
+import { portfolios, volunteer } from "../data/portfolios";
 
 export default function Home() {
   return (
@@ -32,7 +32,9 @@ export default function Home() {
         <section id="volunteer">
           <div className="description">
             <h3>🤝 Volunteer</h3>
-            <p>Some projects that I develop and help to maintain voluntarily that it is in accordance with principles that I believe such as education, culture, art, public health and sustainability</p>
+            <p>
+              Some projects that I develop and help to maintain voluntarily that it is in accordance with principles that I believe such as education, culture, art, public health and sustainability
+            </p>
           </div>
           <div className="flexCards">
             {volunteer.map((p, index) => (
@@ -41,7 +43,7 @@ export default function Home() {
                 image={p.image}
                 title={p.title}
                 description={p.description}
-                //github={p.github}
+                github={p.github}
                 website={p.website}
                 techs={p.techs}
               />
@@ -49,10 +51,12 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer>
+      <footer className="footer">
         <p>made by me</p>
-        <a href="https://twitter.com/arnonrdp" rel="noopener noreferrer" target="_blank">@arnonrdp</a>
+        <a href="https://twitter.com/arnonrdp" rel="noopener noreferrer" target="_blank">
+          @arnonrdp
+        </a>
       </footer>
     </>
-  )
+  );
 }
