@@ -6,7 +6,7 @@
   flex-direction: column;
   background-color: darkseagreen;
   border-radius: 12px;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .articles:hover {
@@ -24,7 +24,7 @@
 }
 
 .portfolioDetails h4 {
-  margin-top: 0;
+  margin: 0;
 }
 
 .portfolioDetails p {
