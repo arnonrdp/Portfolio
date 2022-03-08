@@ -50,10 +50,18 @@ export const portfolios = [
 
 export const volunteer = [
   {
+    image: "/portfolio/cookies-carioca.jpg",
+    title: "Cookies Carioca",
+    description: "A website that sells cookies. I can say that the cookies are delicious.",
+    techs: ["Vue", "Typescript", "Bootstrap"],
+    github: "https://github.com/arnonrdp/Cookies-Carioca",
+    website: "https://cookiescarioca.com.br/",
+  },
+  {
     image: "/portfolio/byarcadia.jpg",
     title: "By Arcadia",
     description: "Arcadia is a form of utopia for people who are interested in every aspect of art.",
     techs: ["Wix"],
-    website: "https://byarcadia.org"
-  }
+    website: "https://byarcadia.org",
+  },
 ];
