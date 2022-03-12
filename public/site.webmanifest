@@ -1,6 +1,7 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Arnon Rodrigues de Paula Portfolio",
+    "short_name": "Arnon's Portfolio",
+    "description": "Portfolio, side projects and contact of Arnon Rodrigues de Paula",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -15,5 +16,6 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "display": "standalone"
+    "display": "standalone",
+    "start_url": "https://arnon.dev/"
 }
