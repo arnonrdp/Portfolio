@@ -55,15 +55,14 @@ html {
 }
 
 body {
-  padding: 0 2rem;
-  margin: 0;
-  max-width: 1200px;
-  margin: auto;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  user-select: none;
   background: var(--primary-color);
-  background: -webkit-linear-gradient(to right, var(--secondary-color), var(--primary-color));
+  background: -webkit-linear-gradient(right, var(--secondary-color), var(--primary-color));
   background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  margin: auto;
+  max-width: 1200px;
+  padding: 0 2rem;
+  user-select: none;
 }
 
 a {
@@ -86,10 +85,10 @@ section .flexCards {
 }
 
 footer {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
+  display: flex;
   font-size: 0.9rem;
+  justify-content: space-between;
 }
 
 footer > a:hover {
