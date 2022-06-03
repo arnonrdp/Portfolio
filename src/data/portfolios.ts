@@ -12,7 +12,7 @@ export const portfolios = [
     title: "Livrero",
     description: "A virtual bookshelf with books you've read and books you want to read.",
     techs: ["Vue", "Quasar", "Firebase"],
-    github: "https://github.com/arnonrdp/Estante-Virtual",
+    github: "https://github.com/arnonrdp/Livrero",
     website: "https://livrero.vercel.app",
   },
   {
