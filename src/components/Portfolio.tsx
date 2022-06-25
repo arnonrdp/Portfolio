@@ -1,7 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
-import { Tooltip } from './Tooltip';
-import styles from '../styles/components/Portfolio.module.css';
 import Image from 'next/image';
+import styles from '../styles/components/Portfolio.module.css';
+import { Tooltip } from './Tooltip';
 
 type PortfolioProps = {
   image: string;
@@ -9,7 +8,7 @@ type PortfolioProps = {
   description: string;
   github?: string;
   website?: string;
-  techs?: any;
+  techs?: string[];
 }
 export function Portfolio(props: PortfolioProps) {
   return (
