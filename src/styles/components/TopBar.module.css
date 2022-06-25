@@ -1,6 +1,6 @@
 .topBar {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: space-between;
   margin: 3rem 0;
 }
@@ -10,33 +10,25 @@
 }
 
 .navBar {
-  width: 15rem;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-end;
+  justify-content: center;
+  width: 16rem;
 }
 
 .navBar button {
   background-color: transparent;
-  transition: all 250ms ease 0s;
-  outline: transparent solid 2px;
-  outline-offset: 2px;
   border-radius: 6px;
   border-color: transparent;
   cursor: pointer;
+  outline: transparent solid 2px;
+  outline-offset: 2px;
+  transition: all 250ms ease 0s;
+  width: 4rem;
 }
 
 .navBar img {
   width: 2rem;
-}
-
-@media screen and (max-width: 450px) {
-  .topBar > div > div > img {
-    width: 100px;
-  }
-  .navBar > div:last-child {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 360px) {
