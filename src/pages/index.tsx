@@ -1,7 +1,7 @@
 import { About } from "../components/About";
 import { Portfolio } from "../components/Portfolio";
 import { Topbar } from "../components/Topbar";
-import { portfolio } from "../data/portfolios";
+import portfolio from "../data/portfolios.json";
 
 export default function Home() {
   return (
