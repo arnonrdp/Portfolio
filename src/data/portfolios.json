@@ -79,7 +79,15 @@
     "description": "Some of the projects I developed during bootcamps, courses or universities.",
     "projects": [
       {
-        "image": "/portfolio/facebook-api.jpg",
+        "image": "/portfolio/facebook-client.jpg",
+        "title": "Bootcamp: Facebook Client",
+        "description": "Frontend client that consumes the user registration and authentication API.",
+        "techs": ["Nuxt", "Typescript", "Sass"],
+        "github": "https://github.com/arnonrdp/Nuxt-Facebook-Frontend",
+        "website": "https://arnon-facebook.vercel.app/"
+      },
+      {
+        "image": "/portfolio/facebook-server.jpg",
         "title": "Bootcamp: Facebook Server",
         "description": "Backend with API generation for user registration and authentication routes.",
         "techs": ["Adonis", "Typescript", "MySQL"],
@@ -95,7 +103,7 @@
         "website": "https://arnon-blog-app.herokuapp.com/"
       },
       {
-        "image": "/portfolio/ibook.jpg",
+        "image": "/portfolio/ibook-client.jpg",
         "title": "Course: iBook Client",
         "description": "Frontend in Nuxt that consumes iBook API and displays book information.",
         "techs": ["Nuxt", "Typescript", "Sass"],
@@ -103,11 +111,11 @@
         "website": "https://ibook-arnon.vercel.app/"
       },
       {
-        "image": "/portfolio/ibook-api.jpg",
+        "image": "/portfolio/ibook-server.jpg",
         "title": "Course: iBook Server",
         "description": "Backend in Node using json-server that store information from some books.",
         "techs": ["Node", "Heroku", "MongoDB"],
-        "github": "https://github.com/arnonrdp/Node-iBook-API",
+        "github": "https://github.com/arnonrdp/Node-iBook-Server",
         "website": "https://arnon-ibook.herokuapp.com/"
       },
       {
