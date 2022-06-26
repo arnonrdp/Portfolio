@@ -1,6 +1,6 @@
-#about p.greetings {
-  margin: 0;
+p.greetings {
   font-size: 1.2rem;
+  margin: 0;
 }
 
 #about h1 {
@@ -9,19 +9,19 @@
 }
 
 #about h2 {
-  margin: 0;
   font-size: 2.8rem;
   color: var(--info-color);
+  margin: 0;
 }
 
-#about p.description {
-  width: 80%;
+p.description {
   font-size: 1rem;
   line-height: 1.35rem;
+  width: 80%;
 }
 
-@media (max-width: 460px) {
-  #about p.description {
+@media (max-width: 620px) {
+  p.description {
     width: 100%;
   }
 }

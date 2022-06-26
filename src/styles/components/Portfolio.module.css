@@ -1,12 +1,11 @@
 .articles {
-  flex: 25%;
-  max-width: 30%;
-  margin: 1rem 1rem;
-  display: flex;
-  flex-direction: column;
   background-color: darkseagreen;
   border-radius: 12px;
-  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 1rem;
+  transition: all 0.3s;
+  width: 21rem;
 }
 
 .articles:hover {
@@ -14,9 +13,9 @@
 }
 
 .portfolioImage {
-  max-width: 100% !important;
-  height: auto !important;
   border-radius: 12px 12px 0 0;
+  height: auto !important;
+  max-width: 100% !important;
 }
 
 .portfolioDetails {
@@ -29,12 +28,13 @@
 
 .portfolioDetails p {
   font-size: 0.9rem;
+  min-height: 2.125rem;
 }
 
 .icons {
   display: flex;
-  justify-content: space-between;
   filter: grayscale(100%);
+  justify-content: space-between;
 }
 
 .articles:hover .icons {
@@ -50,61 +50,7 @@
   margin-left: 1rem;
 }
 
-@media (max-width: 1024px) {
-  .articles {
-    flex: 45%;
-    max-width: 45%;
-  }
-}
-
-@media (max-width: 720px) {
-  .articles {
-    flex: 100%;
-    max-width: 100%;
-  }
-  .articles > div:first-child {
-    height: 350px;
-  }
-}
-
-@media (max-width: 600px) {
-  .articles > div:first-child {
-    height: 250px;
-  }
-}
-
-@media (max-width: 540px) {
-  .articles > div:first-child {
-    height: auto;
-  }
-}
-
-@media (max-width: 350px) {
-  .icons .techs > div {
-    margin-right: 0.5rem;
-  }
-  .icons .techs > div > div > div {
-    width: 25px;
-  }
-  .icons .external > a {
-    margin-left: 0.5rem;
-  }
-  .icons .external > a > div > div > div {
-    width: 25px;
-  }
-}
-
-@media (max-width: 280px) {
-  .icons .techs > div {
-    margin-right: 0.5rem;
-  }
-  .icons .techs > div > div > div {
-    width: 20px;
-  }
-  .icons .external > a {
-    margin-left: 0.5rem;
-  }
-  .icons .external > a > div > div > div {
-    width: 20px;
-  }
+.icons img {
+  height: auto !important;
+  width: 1.5rem !important;
 }

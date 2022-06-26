@@ -74,6 +74,13 @@ section .description h3 {
 section .flexCards {
   display: flex;
   flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+@media (max-width: 1167px) {
+  section .flexCards {
+    justify-content: center;
+  }
 }
 
 footer {
