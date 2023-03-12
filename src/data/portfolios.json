@@ -13,11 +13,11 @@
       },
       {
         "image": "/portfolio/virtual-bookshelf.jpg",
-        "title": "Livrero",
+        "title": "LivroLog",
         "description": "A virtual bookshelf with books you've read and books you want to read.",
         "techs": ["Vue", "Quasar", "Firebase"],
-        "github": "https://github.com/arnonrdp/Livrero",
-        "website": "https://livrero.vercel.app"
+        "github": "https://github.com/arnonrdp/LivroLog",
+        "website": "https://livrolog.com/"
       },
       {
         "image": "/portfolio/myoption.jpg",
