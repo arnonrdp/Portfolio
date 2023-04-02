@@ -63,7 +63,7 @@
         "description": "A website that sells cookies. I can say that the cookies are delicious.",
         "techs": ["Vue", "Typescript", "Bootstrap"],
         "github": "https://github.com/arnonrdp/Cookies-Carioca",
-        "website": "https://cookiescarioca.com.br/"
+        "website": "https://cookies-carioca.vercel.app/"
       },
       {
         "image": "/portfolio/byarcadia.jpg",
