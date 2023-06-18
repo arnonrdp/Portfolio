@@ -4,6 +4,10 @@ import styles from '../styles/components/Timeline.module.css'
 export default function Timeline() {
   return (
     <>
+      <p className={styles.categories}>
+        <span>Education</span>
+        <span>Experience</span>
+      </p>
       <ul className={styles.timeline}>
         {timeline.map((item, index) => (
           <li key={index}>
@@ -19,7 +23,6 @@ export default function Timeline() {
           </li>
         ))}
       </ul>
-      <p>past</p>
     </>
   )
 }

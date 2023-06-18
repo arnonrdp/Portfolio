@@ -1,3 +1,16 @@
+.categories {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.categories span {
+  font-size: 2rem;
+  color: var(--info-color);
+  margin: 0;
+  width: 100%;
+}
+
 .timeline {
   list-style-type: none;
   margin-top: 20px;
