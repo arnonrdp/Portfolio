@@ -1,27 +1,45 @@
 [
   {
-    "title": "Tech Lead",
+    "title": "Lead Developer",
     "company": "Globe & Citizen",
     "time": "Oct / 2022 - Present",
-    "description": "I led the development of the CelebrityFanalyzer application."
+    "description": "🇨🇦 Startup Canadense desenvolvendo soluções de privacidade e segurança para o usuário final."
   },
   {
     "title": "Software Engineer",
     "company": "we45",
     "time": "Jul / 2022 - Present",
-    "description": "I collaborated in the development of the User and Admin Portals, and also in the Checkout service."
+    "description": "🇮🇳 Empresa Indiana focada em soluções de segurança cibernética."
+  },
+  {
+    "title": "Frontend Developer",
+    "company": "Druim Inc",
+    "time": "Jun / 2022 - Nov / 2022",
+    "description": "🇪🇪 Empresa da Estônia desenvolvedora de pequenas aplicações para diversas outras empresas."
   },
   {
     "title": "Software Engineer",
     "company": "PUC Minas",
     "time": "Mar / 2022 - Jul / 2023",
     "education": true,
-    "description": "Master's Degree in Software Engineering at PUC Minas. Related studies in Computer Science, Mathematics, Production, Programming, Software Engineering, Modern Technologies, Teamwork and Communication, Human-Computer Interaction, Areas of expertise, among others."
+    "description": "Pós-graduação em Engenharia de Software. Estudos relacionados em Ciência da Computação, Matemática, Produção, Programação, Engenharia de Software, Tecnologias Modernas, Trabalho em Equipe e Comunicação, Interação Humano-Computador, Áreas de atuação, entre outros."
   },
   {
-    "title": "Software Engineer",
-    "company": "we45",
-    "time": "Jul / 2022 - Present",
-    "description": "I collaborated in the development of the User and Admin Portals, and also in the Checkout service."
+    "title": "Programador Trainee",
+    "company": "OWSE",
+    "time": "Aug / 2021 - Apr / 2022",
+    "description": "🇧🇷 Empresa Brasileira desenvolvedora de softwares para outras empresas."
+  },
+  {
+    "title": "Web Designer",
+    "company": "🇬🇧 JBI Advertising",
+    "time": "Jul / 2021 - Aug / 2022",
+    "description": "Empresa Britânica desenvolvedora de landing pages para diversas empresas."
+  },
+  {
+    "title": "Web Developer",
+    "company": "JBI Advertising",
+    "time": "Jul / 2020 - Jun / 2021",
+    "description": "🇧🇷 Empresa Brasileira. Trabalhei como voluntário."
   }
 ]
