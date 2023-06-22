@@ -153,7 +153,17 @@
   z-index: 14;
 }
 
-.time {
+.company_wrapper {
+  display: block;
+  font-size: 0.8em;
+  line-height: 1em;
+  margin-top: 12px;
+  position: relative;
+  z-index: 14;
+  width: auto;
+}
+
+.company, .time {
   background: rgb(248, 248, 248);
   border-radius: 12px;
   padding: 4px 6px;

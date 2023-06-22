@@ -15,6 +15,11 @@ export default function Timeline() {
               <div className={styles.flag_wrapper}>
                 <span className={styles.flag}>{item.title}</span>
               </div>
+              {item.company && (
+                <div className={styles.company_wrapper}>
+                  <span className={styles.company}>{item.company}</span>
+                </div>
+              )}
               <div className={styles.time_wrapper}>
                 <span className={styles.time}>{item.time}</span>
               </div>
