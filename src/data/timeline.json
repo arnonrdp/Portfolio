@@ -12,17 +12,108 @@
     "description": "🇮🇳 Empresa Indiana focada em soluções de segurança cibernética."
   },
   {
+    "title": "Software Engineer",
+    "company": "PUC Minas",
+    "time": "Mar / 2022 - Jul / 2023",
+    "education": true,
+    "description": "Pós-graduação em Engenharia de Software. Estudos relacionados em Ciência da Computação, Matemática, Produção, Programação, Engenharia de Software, Tecnologias Modernas, Trabalho em Equipe e Comunicação, Interação Humano-Computador, Áreas de atuação, entre outros."
+  },
+  {
     "title": "Frontend Developer",
     "company": "Druim Inc",
     "time": "Jun / 2022 - Nov / 2022",
     "description": "🇪🇪 Empresa da Estônia desenvolvedora de pequenas aplicações para diversas outras empresas."
   },
   {
-    "title": "Software Engineer",
-    "company": "PUC Minas",
-    "time": "Mar / 2022 - Jul / 2023",
+    "title": "Nuxt.js",
+    "company": "Bootcamp Cataline",
+    "time": "Jun - Jul / 2022",
     "education": true,
-    "description": "Pós-graduação em Engenharia de Software. Estudos relacionados em Ciência da Computação, Matemática, Produção, Programação, Engenharia de Software, Tecnologias Modernas, Trabalho em Equipe e Comunicação, Interação Humano-Computador, Áreas de atuação, entre outros."
+    "description": "Desenvolvimento do Frontend do Facebook em Nuxt.js."
+  },
+  {
+    "title": "Adonis.js",
+    "company": "Bootcamp Cataline",
+    "time": "May - Jun / 2022",
+    "education": true,
+    "description": "Desenvolvimento do Backend do Facebook em Adonis.js."
+  },
+  {
+    "title": "Node.js + JSON Server",
+    "company": "Bootcamp Cataline",
+    "time": "May - Jun / 2022",
+    "education": true,
+    "description": "Desenvolvimento de uma API REST em Node.js e JSON Server."
+  },
+  {
+    "title": "Nuxt.js + Atomic Design",
+    "company": "Bootcamp Cataline",
+    "time": "Apr - Jun / 2022",
+    "education": true,
+    "description": "Desenvolvimento de um site em Nuxt.js e Atomic Design."
+  },
+  {
+    "title": "Vue.js + Atomic Design",
+    "company": "Bootcamp Cataline",
+    "time": "Apr / 2022",
+    "education": true,
+    "description": "Desenvolvimento de uma landing page em Vue.js e Atomic Design."
+  },
+  {
+    "title": "Node.js",
+    "company": "Bootcamp Cataline",
+    "time": "Apr / 2022",
+    "education": true,
+    "description": "Desenvolvimento de um CRUD em Node.js."
+  },
+  {
+    "title": "Flutter",
+    "company": "Cod3r Cursos",
+    "time": "Apr / 2022",
+    "education": true,
+    "description": "Desenvolvimento de uma calculadora em Flutter."
+  },
+  {
+    "title": "Node.js + Mongoose + MongoDB",
+    "company": "Guia do Programador",
+    "time": "Nov / 2021",
+    "education": true,
+    "description": "Curso de Node.js, Mongoose e MongoDB."
+  },
+  {
+    "title": "Node.js + Sequelize",
+    "company": "Guia do Programador",
+    "time": "Nov / 2021",
+    "education": true,
+    "description": "Desenvolvimento de um blog app em Node.js e Sequelize."
+  },
+  {
+    "title": "Vue.js",
+    "company": "Cod3r Cursos",
+    "time": "Aug / 2021",
+    "education": true,
+    "description": "Desenvolvimento de uma calculadora em Vue.js."
+  },
+  {
+    "title": "Spring Boot",
+    "company": "Amigoscode",
+    "time": "Oct / 2021",
+    "education": true,
+    "description": "Curso de Spring Boot."
+  },
+  {
+    "title": "Spring Boot + Vue",
+    "company": "",
+    "time": "Sep - Nov / 2021",
+    "education": true,
+    "description": "Curso de Spring Boot e Vue.js."
+  },
+  {
+    "title": "Java",
+    "company": "DevDojo",
+    "time": "Sep - Nov / 2021",
+    "education": true,
+    "description": "Maratona Java do DevDojo."
   },
   {
     "title": "Programador Trainee",
@@ -37,9 +128,37 @@
     "description": "Empresa Britânica desenvolvedora de landing pages para diversas empresas."
   },
   {
+    "title": "Python",
+    "company": "Curso em Vídeo",
+    "time": "Apr - Jun / 2021",
+    "education": true,
+    "description": "Curso de Python do Gustavo Guanabara."
+  },
+  {
+    "title": "React + Next.js",
+    "company": "Rocketseat",
+    "time": "Fev / 2021",
+    "education": true,
+    "description": "Desenvolvimento de um Pomodoro em React e Next.js."
+  },
+  {
+    "title": "JavaScript",
+    "company": "Curso em Vídeo",
+    "time": "Sep - Nov / 2020",
+    "education": true,
+    "description": "Curso de JavaScript do Gustavo Guanabara."
+  },
+  {
     "title": "Web Developer",
-    "company": "JBI Advertising",
+    "company": "Grupo AJL",
     "time": "Jul / 2020 - Jun / 2021",
     "description": "🇧🇷 Empresa Brasileira. Trabalhei como voluntário."
+  },
+  {
+    "title": "SQL",
+    "company": "",
+    "time": "Aug / 2019",
+    "education": true,
+    "description": "Curso de SQL."
   }
 ]
