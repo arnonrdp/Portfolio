@@ -145,23 +145,17 @@
 
 .time_wrapper {
   color: rgb(250, 80, 80);
-  display: inline;
+  display: block;
   font-size: 0.66666em;
   line-height: 1em;
-  vertical-align: middle;
-}
-
-.direction_l .time_wrapper {
-  float: left;
-}
-
-.direction_r .time_wrapper {
-  float: right;
+  margin-top: 12px;
+  position: relative;
+  z-index: 14;
 }
 
 .time {
   background: rgb(248, 248, 248);
-  display: inline-block;
+  border-radius: 12px;
   padding: 4px 6px;
 }
 
@@ -232,21 +226,6 @@
     position: absolute;
     top: -8px;
     width: 0;
-  }
-
-  .time_wrapper {
-    display: block;
-    margin: 4px 0 0 0;
-    position: relative;
-    z-index: 14;
-  }
-
-  .direction_l .time_wrapper {
-    float: none;
-  }
-
-  .direction_r .time_wrapper {
-    float: none;
   }
 
   .desc {
