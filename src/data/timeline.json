@@ -190,6 +190,13 @@
     "description": "Curso de Lógica de Programação Essencial."
   },
   {
+    "title": "Java POO",
+    "company": "Curso em Vídeo",
+    "time": "Jul / 2021",
+    "education": true,
+    "description": "Curso de Java POO do Gustavo Guanabara."
+  },
+  {
     "title": "Web Designer",
     "company": "JBI Advertising",
     "time": "Jul - Aug / 2021",
@@ -201,6 +208,13 @@
     "time": "Jul - Aug / 2021",
     "education": true,
     "description": "Curso de JavaScript Algorithms and Data Structures do freeCodeCamp."
+  },
+  {
+    "title": "Java Básico",
+    "company": "Curso em Vídeo",
+    "time": "Jul / 2021",
+    "education": true,
+    "description": "Curso de Java Básico do Gustavo Guanabara."
   },
   {
     "title": "Web Design",
@@ -221,6 +235,13 @@
     "time": "May / 2021",
     "education": true,
     "description": "Curso de SCRUM Fundamentals Certified do SCRUMStudy."
+  },
+  {
+    "title": "Git e GitHub",
+    "company": "Curso em Vídeo",
+    "time": "Jan / 2021",
+    "education": true,
+    "description": "Curso de Git e GitHub do Gustavo Guanabara."
   },
   {
     "title": "⭐️ Python",
@@ -250,6 +271,20 @@
     "description": "Instrodução a Ciência da Computação. HTML, CSS, JavaScript, Python, SQL, Git, etc."
   },
   {
+    "title": "WordPress",
+    "company": "Curso em Vídeo",
+    "time": "Jan / 2021",
+    "education": true,
+    "description": "Curso de WordPress do Gustavo Guanabara."
+  },
+  {
+    "title": "MySQL",
+    "company": "Curso em Vídeo",
+    "time": "Nov / 2020",
+    "education": true,
+    "description": "Curso de MySQL do Gustavo Guanabara."
+  },
+  {
     "title": "JavaScript",
     "company": "Curso em Vídeo",
     "time": "Sep - Nov / 2020",
@@ -257,10 +292,10 @@
     "description": "Curso de JavaScript do Gustavo Guanabara."
   },
   {
-    "title": "SQL",
-    "company": "",
-    "time": "Aug / 2019",
+    "title": "HTML5",
+    "company": "Curso em Vídeo",
+    "time": "Jun - Sep / 2020",
     "education": true,
-    "description": "Curso de SQL."
+    "description": "Curso de HTML5 do Gustavo Guanabara."
   }
 ]
