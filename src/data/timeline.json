@@ -12,16 +12,15 @@
     "description": "🇮🇳 Empresa Indiana focada em soluções de segurança cibernética."
   },
   {
-    "title": "Software Engineer",
-    "company": "PUC Minas",
-    "time": "Mar / 2022 - Jul / 2023",
-    "education": true,
-    "description": "Pós-graduação em Engenharia de Software. Estudos relacionados em Ciência da Computação, Matemática, Produção, Programação, Engenharia de Software, Tecnologias Modernas, Trabalho em Equipe e Comunicação, Interação Humano-Computador, Áreas de atuação, entre outros."
+    "title": "Programador Junior",
+    "company": "OWSE",
+    "time": "Apr - Aug / 2022",
+    "description": "🇧🇷 Empresa Brasileira desenvolvedora de softwares para outras empresas."
   },
   {
     "title": "Frontend Developer",
     "company": "Druim Inc",
-    "time": "Jun / 2022 - Nov / 2022",
+    "time": "Jun - Nov / 2022",
     "description": "🇪🇪 Empresa da Estônia desenvolvedora de pequenas aplicações para diversas outras empresas."
   },
   {
@@ -74,6 +73,26 @@
     "description": "Desenvolvimento de uma calculadora em Flutter."
   },
   {
+    "title": "Software Engineer",
+    "company": "PUC Minas",
+    "time": "Mar / 2022 - Jul / 2023",
+    "education": true,
+    "description": "Pós-graduação em Engenharia de Software. Estudos relacionados em Ciência da Computação, Matemática, Produção, Programação, Engenharia de Software, Tecnologias Modernas, Trabalho em Equipe e Comunicação, Interação Humano-Computador, Áreas de atuação, entre outros."
+  },
+  {
+    "title": "Programador Trainee II",
+    "company": "OWSE",
+    "time": "Jan - Apr / 2022",
+    "description": "🇧🇷 Empresa Brasileira desenvolvedora de softwares para outras empresas."
+  },
+  {
+    "title": "Spring Boot",
+    "company": "Amigoscode",
+    "time": "Oct / 2021",
+    "education": true,
+    "description": "Curso de Spring Boot."
+  },
+  {
     "title": "Node.js + Mongoose + MongoDB",
     "company": "Guia do Programador",
     "time": "Nov / 2021",
@@ -88,18 +107,11 @@
     "description": "Desenvolvimento de um blog app em Node.js e Sequelize."
   },
   {
-    "title": "Vue.js",
-    "company": "Cod3r Cursos",
-    "time": "Aug / 2021",
-    "education": true,
-    "description": "Desenvolvimento de uma calculadora em Vue.js."
-  },
-  {
-    "title": "Spring Boot",
-    "company": "Amigoscode",
+    "title": "Java",
+    "company": "Digital Innovation One",
     "time": "Oct / 2021",
     "education": true,
-    "description": "Curso de Spring Boot."
+    "description": "Desenvolvimento avançado em Java"
   },
   {
     "title": "Spring Boot + Vue",
@@ -116,19 +128,96 @@
     "description": "Maratona Java do DevDojo."
   },
   {
-    "title": "Programador Trainee",
+    "title": "Java Collections e Stream",
+    "company": "Digital Innovation One",
+    "time": "Aug / 2021",
+    "education": true,
+    "description": "Implementando Collections e Streams com Java"
+  },
+  {
+    "title": "Spring Boot & MVC + Thymeleaf",
+    "company": "Udemy",
+    "time": "Aug / 2021",
+    "education": true,
+    "description": "Curso de Spring Boot & MVC com Thymeleaf."
+  },
+  {
+    "title": "Java",
+    "company": "Digital Innovation One",
+    "time": "Aug / 2021",
+    "education": true,
+    "description": "Desenvolvimento básico em Java"
+  },
+  {
+    "title": "Arquitetura de Sistemas",
+    "company": "Digital Innovation One",
+    "time": "Aug / 2021",
+    "education": true,
+    "description": "Fundamentos de Arquitetura de Sistemas."
+  },
+  {
+    "title": "Programador Trainee I",
     "company": "OWSE",
-    "time": "Aug / 2021 - Apr / 2022",
+    "time": "Aug / 2021 - Jan / 2022",
     "description": "🇧🇷 Empresa Brasileira desenvolvedora de softwares para outras empresas."
+  },
+  {
+    "title": "Git e GitHub",
+    "company": "Digital Innovation One",
+    "time": "Aug / 2021",
+    "education": true,
+    "description": "Introdução ao Git e ao GitHub"
+  },
+  {
+    "title": "Vue.js",
+    "company": "Digital Innovation One",
+    "time": "Aug / 2021",
+    "education": true,
+    "description": "Desenvolvendo sua primeira aplicação com Vue.js."
+  },
+  {
+    "title": "Vue.js",
+    "company": "Cod3r Cursos",
+    "time": "Aug / 2021",
+    "education": true,
+    "description": "Desenvolvimento de uma calculadora em Vue.js."
+  },
+  {
+    "title": "Lógica de Programação Essencial",
+    "company": "Digital Innovation One",
+    "time": "Aug / 2021",
+    "education": true,
+    "description": "Curso de Lógica de Programação Essencial."
   },
   {
     "title": "Web Designer",
     "company": "🇬🇧 JBI Advertising",
-    "time": "Jul / 2021 - Aug / 2022",
+    "time": "Jul - Aug / 2021",
     "description": "Empresa Britânica desenvolvedora de landing pages para diversas empresas."
   },
   {
-    "title": "Python",
+    "title": "⭐️ JavaScript Algorithms",
+    "company": "freeCodeCamp",
+    "time": "Jul - Aug / 2021",
+    "education": true,
+    "description": "Curso de JavaScript Algorithms and Data Structures do freeCodeCamp."
+  },
+  {
+    "title": "⭐️ Responsive Web Design",
+    "company": "freeCodeCamp",
+    "time": "May - Jun / 2021",
+    "education": true,
+    "description": "Curso de Responsive Web Design do freeCodeCamp."
+  },
+  {
+    "title": "SCRUM Fundamentals",
+    "company": "SCRUMStudy",
+    "time": "May / 2021",
+    "education": true,
+    "description": "Curso de SCRUM Fundamentals Certified do SCRUMStudy."
+  },
+  {
+    "title": "⭐️ Python",
     "company": "Curso em Vídeo",
     "time": "Apr - Jun / 2021",
     "education": true,
@@ -142,17 +231,24 @@
     "description": "Desenvolvimento de um Pomodoro em React e Next.js."
   },
   {
+    "title": "Web Developer",
+    "company": "Grupo AJL",
+    "time": "Jan - Jun / 2021",
+    "description": "🇧🇷 Empresa familiar. Trabalhei como voluntário."
+  },
+  {
+    "title": "⭐️ CS50",
+    "company": "Harvard University",
+    "time": "Jan - Mar / 2021",
+    "education": true,
+    "description": "Instrodução a Ciência da Computação. HTML, CSS, JavaScript, Python, SQL, Git, etc."
+  },
+  {
     "title": "JavaScript",
     "company": "Curso em Vídeo",
     "time": "Sep - Nov / 2020",
     "education": true,
     "description": "Curso de JavaScript do Gustavo Guanabara."
-  },
-  {
-    "title": "Web Developer",
-    "company": "Grupo AJL",
-    "time": "Jul / 2020 - Jun / 2021",
-    "description": "🇧🇷 Empresa Brasileira. Trabalhei como voluntário."
   },
   {
     "title": "SQL",
