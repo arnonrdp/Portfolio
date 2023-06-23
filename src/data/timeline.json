@@ -191,9 +191,9 @@
   },
   {
     "title": "Web Designer",
-    "company": "🇬🇧 JBI Advertising",
+    "company": "JBI Advertising",
     "time": "Jul - Aug / 2021",
-    "description": "Empresa Britânica desenvolvedora de landing pages para diversas empresas."
+    "description": "🇬🇧 Empresa Britânica desenvolvedora de landing pages para diversas empresas."
   },
   {
     "title": "⭐️ JavaScript Algorithms",
@@ -201,6 +201,12 @@
     "time": "Jul - Aug / 2021",
     "education": true,
     "description": "Curso de JavaScript Algorithms and Data Structures do freeCodeCamp."
+  },
+  {
+    "title": "Web Design",
+    "company": "Arcadia",
+    "time": "Jun / 2021 - Apr / 2023",
+    "description": "🇹🇷 Empresa Turca relacionada a artes e cultura por meio de blog. Trabalhei como voluntário."
   },
   {
     "title": "⭐️ Responsive Web Design",
