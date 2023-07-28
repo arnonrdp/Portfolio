@@ -4,6 +4,14 @@
     "description": "Some projects that I have built and maintain",
     "projects": [
       {
+        "image": "/portfolio/brasileiro-ninja.jpg",
+        "title": "Brasileiro Ninja",
+        "description": "A Bot that reads Filipe Deschamps' Newsletter and turns each news into a Tweet.",
+        "techs": ["Vue", "JavaScript", "Chart.js"],
+        "github": "https://brasileiro.ninja",
+        "website": "https://twitter.com/Brasileiro-Ninja"
+      },
+      {
         "image": "/portfolio/bot-deschamps.jpg",
         "title": "Bot Deschamps Newsletter",
         "description": "A Bot that reads Filipe Deschamps' Newsletter and turns each news into a Tweet.",
