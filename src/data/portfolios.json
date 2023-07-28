@@ -8,8 +8,8 @@
         "title": "Brasileiro Ninja",
         "description": "A Bot that reads Filipe Deschamps' Newsletter and turns each news into a Tweet.",
         "techs": ["Vue", "JavaScript", "Chart.js"],
-        "github": "https://brasileiro.ninja",
-        "website": "https://twitter.com/Brasileiro-Ninja"
+        "github": "https://github.com/arnonrdp/Brasileiro-Ninja",
+        "website": "https://brasileiro.ninja"
       },
       {
         "image": "/portfolio/bot-deschamps.jpg",
