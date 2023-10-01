@@ -52,3 +52,4 @@ To add a language, add its code to `TARGETS` in `scripts/translate.mjs` and run 
 *calmly made by [Arnon Rodrigues](https://github.com/arnonrdp)*
 
 </div>
+
