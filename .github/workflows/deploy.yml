@@ -30,4 +30,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: out/
-          server-dir: public_html/
+          # O home do usuário FTP da Hostinger já é o public_html do site.
+          server-dir: ./
