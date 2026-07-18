@@ -1,34 +1,452 @@
-import { About } from "../components/About";
-import { Portfolio } from "../components/Portfolio";
-import { Topbar } from "../components/Topbar";
-import portfolio from "../data/portfolios.json";
+import Image from 'next/image'
+import { useEffect, useRef, useState } from 'react'
+import { MeditatingAvatar } from '../components/MeditatingAvatar'
+import dictData from '../data/dict.json'
+import portfoliosData from '../data/portfolios.json'
+import skillsData from '../data/skills.json'
+import timelineData from '../data/timeline.json'
+import translationsData from '../data/translations.json'
+import s from '../styles/Home.module.css'
+
+interface Project {
+  image?: string
+  title: string
+  github?: string
+  website?: string
+  techs?: string[]
+  desc: string
+}
+
+interface TimelineItem {
+  time: string
+  title: string
+  company: string
+  desc: string
+}
+
+interface Dict {
+  greet: string
+  tagline: string
+  bio: string
+  ctaProjects: string
+  ctaContact: string
+  scroll: string
+  projLabel: string
+  projTitle: string
+  projSub: string
+  visit: string
+  moreTitle: string
+  skillsLabel: string
+  skillsTitle: string
+  statRepos: string
+  statFollowers: string
+  statYears: string
+  tlLabel: string
+  tlTitle: string
+  ctLabel: string
+  ctTitle: string
+  ctSub: string
+  footer: string
+  sections: { id: string; label: string }[]
+}
+
+const dict = dictData as Dict
+const translations = translationsData as Record<string, Record<string, string>>
+const { featured, more } = portfoliosData as { featured: Project[]; more: Project[] }
+const skills = skillsData as string[]
+const timeline = timelineData as TimelineItem[]
+
+// Idiomas disponíveis = EN (fonte) + os gerados por `npm run translate`.
+const LANGS = ['en', ...Object.keys(translations)]
+
+const SECTION_IDS = ['inicio', 'projetos', 'skills', 'jornada', 'contato']
+
+const clamp = (min: number, max: number, v: number) => Math.max(min, Math.min(max, v))
+
+const langName = (code: string) => {
+  try {
+    const name = new Intl.DisplayNames([code], { type: 'language' }).of(code)
+    return name ? name.charAt(0).toUpperCase() + name.slice(1) : code
+  } catch {
+    return code
+  }
+}
 
 export default function Home() {
+  const [lang, setLang] = useState('en')
+  const [langOpen, setLangOpen] = useState(false)
+  const [theme, setTheme] = useState<'dark' | 'light'>('dark')
+  const [active, setActive] = useState('inicio')
+  const [heroP, setHeroP] = useState(0)
+  const [revealed, setRevealed] = useState<Record<string, boolean>>({})
+  const [wm, setWm] = useState<Record<string, number>>({})
+  const [tilt, setTilt] = useState(0)
+  const [gh, setGh] = useState<{ repos: string | number; followers: string | number }>({ repos: '30+', followers: '—' })
+  const charRef = useRef<HTMLDivElement>(null)
+  const themeMounted = useRef(false)
+
+  useEffect(() => {
+    const nav = navigator.language.toLowerCase()
+    const detected = LANGS.find((l) => l.toLowerCase() === nav) || LANGS.find((l) => l.toLowerCase().split('-')[0] === nav.split('-')[0])
+    if (detected) setLang(detected)
+    try {
+      if (localStorage.theme === 'light') setTheme('light')
+    } catch {}
+
+    fetch('https://api.github.com/users/arnonrdp')
+      .then((r) => r.json())
+      .then((d) => {
+        if (d && d.public_repos != null) setGh({ repos: d.public_repos, followers: d.followers })
+      })
+      .catch(() => {})
+
+    let scrollRaf = 0
+    const onScroll = () => {
+      if (scrollRaf) return
+      scrollRaf = requestAnimationFrame(() => {
+        scrollRaf = 0
+        const vh = window.innerHeight
+        setHeroP(clamp(0, 1, Math.round((window.scrollY / (vh * 0.85)) * 50) / 50))
+
+        let current = 'inicio'
+        const nextWm: Record<string, number> = {}
+        const nextRev: Record<string, boolean> = {}
+        for (const id of SECTION_IDS) {
+          const el = document.getElementById(id)
+          if (!el) continue
+          const rect = el.getBoundingClientRect()
+          if (rect.top < vh * 0.4) current = id
+          if (id !== 'inicio' && rect.top < vh * 0.78) nextRev[id] = true
+          const rel = clamp(-1, 1, (rect.top + rect.height / 2 - vh / 2) / (vh + rect.height / 2))
+          nextWm[id] = Math.round((rel * -100) / 5) * 5
+        }
+        setActive(current)
+        setWm((prev) => (SECTION_IDS.some((id) => prev[id] !== nextWm[id]) ? nextWm : prev))
+        setRevealed((prev) => (Object.keys(nextRev).some((id) => !prev[id]) ? { ...prev, ...nextRev } : prev))
+      })
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+    const t1 = setTimeout(onScroll, 300)
+    const t2 = setTimeout(onScroll, 1200)
+
+    let mouseRaf = 0
+    const onMouseMove = (e: MouseEvent) => {
+      if (mouseRaf) return
+      const { clientX } = e
+      mouseRaf = requestAnimationFrame(() => {
+        mouseRaf = 0
+        const el = charRef.current
+        if (!el) return
+        const rect = el.getBoundingClientRect()
+        const dx = clamp(-1, 1, (clientX - (rect.left + rect.width / 2)) / (window.innerWidth / 2))
+        setTilt(Math.round(dx * 2 * 10) / 10)
+      })
+    }
+    window.addEventListener('mousemove', onMouseMove, { passive: true })
+
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('mousemove', onMouseMove)
+      clearTimeout(t1)
+      clearTimeout(t2)
+      if (scrollRaf) cancelAnimationFrame(scrollRaf)
+      if (mouseRaf) cancelAnimationFrame(mouseRaf)
+    }
+  }, [])
+
+  useEffect(() => {
+    // O script pré-paint no _document já aplicou o data-theme salvo; a primeira
+    // execução com o estado inicial "dark" o apagaria e causaria flash.
+    if (!themeMounted.current) {
+      themeMounted.current = true
+      return
+    }
+    if (theme === 'light') document.documentElement.dataset.theme = 'light'
+    else delete document.documentElement.dataset.theme
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'light' ? '#f2f4f0' : '#0a1412')
+    try {
+      localStorage.theme = theme
+    } catch {}
+  }, [theme])
+
+  useEffect(() => {
+    document.documentElement.lang = lang
+  }, [lang])
+
+  // translations.json é um cache EN → idioma gerado/complementado por `npm run translate`.
+  const table = translations[lang]
+  const tr = (text: string) => (table && table[text]) || text
+  const years = new Date().getFullYear() - 2020 + '+'
+  const heroOp = Math.max(0, Math.round((1 - heroP * 1.1) * 100) / 100)
+  const on = (id: string) => (revealed[id] ? ` ${s.on}` : '')
+
   return (
-    <>
-      <Topbar />
-      <main>
-        <About />
-        {portfolio.map((item, index) => (
-          <section key={index}>
-            <div className="description">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </div>
-            <div className="flexCards">
-              {item.projects.map((card, index) => (
-                <Portfolio key={index} {...card} />
-              ))}
-            </div>
-          </section>
+    <div className={s.root}>
+      <div className={s.bg} aria-hidden />
+
+      <header className={s.header}>
+        <a href="#inicio" className={s.logo}>
+          arnon<span>.dev</span>
+        </a>
+        <div className={s.toggles}>
+          <div className={s.langWrap}>
+            <button className={s.langBtn} onClick={() => setLangOpen((open) => !open)} aria-haspopup="listbox" aria-expanded={langOpen}>
+              {lang.split('-')[0].toUpperCase()}
+            </button>
+            {langOpen && (
+              <>
+                <div className={s.backdrop} onClick={() => setLangOpen(false)} />
+                <div className={s.langMenu} role="listbox">
+                  {LANGS.map((code) => (
+                    <button
+                      key={code}
+                      role="option"
+                      aria-selected={code === lang}
+                      className={`${s.langItem}${code === lang ? ` ${s.langItemActive}` : ''}`}
+                      onClick={() => {
+                        setLang(code)
+                        setLangOpen(false)
+                      }}
+                    >
+                      {langName(code)}
+                    </button>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+          <button
+            className={s.themeBtn}
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            aria-label={theme === 'dark' ? 'light theme' : 'dark theme'}
+          >
+            {theme === 'dark' ? '☾' : '☀'}
+          </button>
+        </div>
+      </header>
+
+      <nav className={s.dots} aria-label="chapters">
+        {dict.sections.map((section) => (
+          <a
+            key={section.id}
+            href={`#${section.id}`}
+            title={tr(section.label)}
+            className={`${s.dotLink}${active === section.id ? ` ${s.dotActive}` : ''}`}
+          >
+            <span className={s.dotLabel}>{tr(section.label)}</span>
+            <span className={s.dot} />
+          </a>
         ))}
+      </nav>
+
+      <main className={s.container}>
+        <section id="inicio" className={s.hero}>
+          <div style={{ transform: `translateY(${Math.round(heroP * 60)}px)`, opacity: heroOp }}>
+            <p className={s.greet}>{tr(dict.greet)}</p>
+            <h1 className={s.h1}>
+              Arnon
+              <br />
+              Rodrigues<span>.</span>
+            </h1>
+            <h2 className={s.tagline}>{tr(dict.tagline)}</h2>
+            <p className={s.bio}>{tr(dict.bio)}</p>
+            <div className={s.ctas}>
+              <a href="#projetos" className={s.ctaPrimary}>
+                {tr(dict.ctaProjects)}
+              </a>
+              <a href="#contato" className={s.ctaGhost}>
+                {tr(dict.ctaContact)}
+              </a>
+            </div>
+            <div className={s.social}>
+              <a href="https://github.com/arnonrdp" target="_blank" rel="noreferrer">
+                <Image src="/icons/github.svg" alt="GitHub" width={24} height={24} unoptimized className={s.mono} />
+              </a>
+              <a href="https://linkedin.com/in/arnonrdp" target="_blank" rel="noreferrer">
+                <Image src="/icons/linkedin.svg" alt="LinkedIn" width={24} height={24} unoptimized />
+              </a>
+              <a href="mailto:me@arnon.dev">
+                <Image src="/icons/email.svg" alt="Email" width={24} height={24} unoptimized />
+              </a>
+            </div>
+          </div>
+          <div
+            ref={charRef}
+            className={s.heroChar}
+            style={{
+              transform: `translateY(${Math.round(heroP * 130)}px) scale(${Math.round((1 - heroP * 0.12) * 1000) / 1000})`,
+              opacity: heroOp
+            }}
+          >
+            <MeditatingAvatar tilt={tilt} />
+          </div>
+          <div className={s.scrollHint}>
+            {tr(dict.scroll)}
+            <span className={s.hintArrow}>↓</span>
+          </div>
+        </section>
+
+        <section id="projetos" className={s.section}>
+          <div className={s.wm} style={{ transform: `translateX(${wm.projetos || 0}px)` }} aria-hidden>
+            01
+          </div>
+          <div className={s.rvY + on('projetos')}>
+            <p className={s.kicker}>01 — {tr(dict.projLabel)}</p>
+            <h2 className={s.h2sec}>{tr(dict.projTitle)}</h2>
+            <p className={s.sub}>{tr(dict.projSub)}</p>
+          </div>
+          <div className={s.cards}>
+            {featured.map((project, i) => {
+              const delay = `${(i % 3) * 0.13}s`
+              return (
+                <article key={project.title} className={s.card + on('projetos')} style={{ transitionDelay: `0s, 0s, ${delay}, ${delay}` }}>
+                  <Image src={project.image!} alt={project.title} width={400} height={233} className={s.cardImg} />
+                  <div className={s.cardBody}>
+                    <h3>{project.title}</h3>
+                    <p>{tr(project.desc)}</p>
+                    <div className={s.cardFoot}>
+                      <div className={s.cardTechs}>
+                        {project.techs?.map((tech) => (
+                          <Image key={tech} src={`/icons/${tech}.svg`} alt={tech} title={tech} width={22} height={22} unoptimized />
+                        ))}
+                      </div>
+                      <div className={s.cardLinks}>
+                        {project.github && (
+                          <a href={project.github} target="_blank" rel="noreferrer" title="GitHub">
+                            <Image src="/icons/github.svg" alt="GitHub" width={20} height={20} unoptimized className={s.mono} />
+                          </a>
+                        )}
+                        {project.website && (
+                          <a href={project.website} target="_blank" rel="noreferrer" title={tr(dict.visit)}>
+                            <Image src="/icons/external.svg" alt={tr(dict.visit)} width={20} height={20} unoptimized className={s.mono} />
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              )
+            })}
+          </div>
+          <h3 className={s.moreTitle}>{tr(dict.moreTitle)}</h3>
+          <div>
+            {more.map((project, i) => {
+              const delay = `${0.3 + Math.min(i, 8) * 0.05}s`
+              return (
+                <div key={project.title} className={s.row + on('projetos')} style={{ transitionDelay: `0s, ${delay}, ${delay}` }}>
+                  <span className={s.rowTitle}>{project.title}</span>
+                  <span className={s.rowDesc}>{tr(project.desc)}</span>
+                  <div className={s.rowLinks}>
+                    {project.github && (
+                      <a href={project.github} target="_blank" rel="noreferrer" title="GitHub">
+                        <Image src="/icons/github.svg" alt="GitHub" width={18} height={18} unoptimized className={s.mono} />
+                      </a>
+                    )}
+                    {project.website && (
+                      <a href={project.website} target="_blank" rel="noreferrer" title={tr(dict.visit)}>
+                        <Image src="/icons/external.svg" alt={tr(dict.visit)} width={18} height={18} unoptimized className={s.mono} />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </section>
+
+        <section id="skills" className={s.section}>
+          <div className={s.wm} style={{ transform: `translateX(${wm.skills || 0}px)` }} aria-hidden>
+            02
+          </div>
+          <div className={s.rvY + on('skills')}>
+            <p className={s.kicker}>02 — {tr(dict.skillsLabel)}</p>
+            <h2 className={s.h2sec}>{tr(dict.skillsTitle)}</h2>
+          </div>
+          <div className={s.skills}>
+            {skills.map((skill, i) => {
+              const delay = `${i * 0.05}s`
+              return (
+                <div key={skill} className={s.skill + on('skills')} style={{ transitionDelay: `0s, 0s, ${delay}, ${delay}` }}>
+                  <Image src={`/icons/${skill}.svg`} alt={skill} width={34} height={34} unoptimized />
+                  <span>{skill}</span>
+                </div>
+              )
+            })}
+          </div>
+          <div className={`${s.stats} ${s.rvY}` + on('skills')} style={{ transitionDelay: '0.35s' }}>
+            <div className={s.stat}>
+              <div className={s.statNum}>{gh.repos}</div>
+              <div className={s.statLabel}>{tr(dict.statRepos)}</div>
+            </div>
+            <div className={s.stat}>
+              <div className={s.statNum}>{gh.followers}</div>
+              <div className={s.statLabel}>{tr(dict.statFollowers)}</div>
+            </div>
+            <div className={s.stat}>
+              <div className={s.statNum}>{years}</div>
+              <div className={s.statLabel}>{tr(dict.statYears)}</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="jornada" className={s.section}>
+          <div className={s.wm} style={{ transform: `translateX(${wm.jornada || 0}px)` }} aria-hidden>
+            03
+          </div>
+          <div className={s.rvY + on('jornada')}>
+            <p className={s.kicker}>03 — {tr(dict.tlLabel)}</p>
+            <h2 className={s.h2sec}>{tr(dict.tlTitle)}</h2>
+          </div>
+          <div className={s.tl}>
+            {timeline.map((item, i) => (
+              <div key={item.company} className={s.tlItem + on('jornada')} style={{ transitionDelay: `${i * 0.12}s` }}>
+                <span className={s.tlDot} />
+                <span className={s.tlTime}>{tr(item.time)}</span>
+                <h3>
+                  {tr(item.title)} <span>· {item.company}</span>
+                </h3>
+                <p className={s.tlDesc}>{tr(item.desc)}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="contato" className={s.section}>
+          <div className={s.wm} style={{ transform: `translateX(${wm.contato || 0}px)` }} aria-hidden>
+            04
+          </div>
+          <div className={s.contactWrap + on('contato')}>
+            <p className={s.kicker}>04 — {tr(dict.ctLabel)}</p>
+            <h2 className={s.h2big}>{tr(dict.ctTitle)}</h2>
+            <p className={s.sub}>{tr(dict.ctSub)}</p>
+            <div className={s.contactGrid}>
+              <a href="mailto:me@arnon.dev" className={s.contactCard}>
+                <Image src="/icons/email.svg" alt="Email" width={30} height={30} unoptimized />
+                <strong>Email</strong>
+                <span>me@arnon.dev</span>
+              </a>
+              <a href="https://linkedin.com/in/arnonrdp" target="_blank" rel="noreferrer" className={s.contactCard}>
+                <Image src="/icons/linkedin.svg" alt="LinkedIn" width={30} height={30} unoptimized />
+                <strong>LinkedIn</strong>
+                <span>/in/arnonrdp</span>
+              </a>
+              <a href="https://github.com/arnonrdp" target="_blank" rel="noreferrer" className={s.contactCard}>
+                <Image src="/icons/github.svg" alt="GitHub" width={30} height={30} unoptimized className={s.mono} />
+                <strong>GitHub</strong>
+                <span>@arnonrdp</span>
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="footer">
-        <p>made by me</p>
-        <a href="https://twitter.com/arnonrdp" rel="noopener noreferrer" target="_blank">
+
+      <footer className={s.footer}>
+        <p>{tr(dict.footer)}</p>
+        <a href="https://twitter.com/arnonrdp" target="_blank" rel="noreferrer">
           @arnonrdp
         </a>
       </footer>
-    </>
-  );
+    </div>
+  )
 }

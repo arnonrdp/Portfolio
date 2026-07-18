@@ -1,301 +1,44 @@
 [
   {
+    "time": "Oct 2023 — Present",
+    "title": "Software Engineer",
+    "company": "FincenFetch",
+    "desc": "Leading frontend development across FincenFetch products, including FetchInsights, TurboCTA, FinCENRealEstateReport, and FIRPTAfox — platforms that automate regulatory reporting, real estate compliance, FIRPTA workflows, and practice growth."
+  },
+  {
+    "time": "Aug 2023 — Jul 2024",
+    "title": "Freelancer",
+    "company": "Hellenic Technologies",
+    "desc": "Development of Feedel.app, delivering solutions to eBay resellers."
+  },
+  {
+    "time": "Oct 2022 — Mar 2025",
     "title": "Lead Developer",
     "company": "Globe & Citizen",
-    "time": "Oct / 2022 - Present",
-    "description": "🇨🇦 Startup Canadense desenvolvendo soluções de privacidade e segurança para o usuário final."
+    "desc": "🇨🇦 Canadian startup building privacy and security solutions for end users."
   },
   {
+    "time": "Jul 2022 — Dec 2023",
     "title": "Software Engineer",
     "company": "we45",
-    "time": "Jul / 2022 - Present",
-    "description": "🇮🇳 Empresa Indiana focada em soluções de segurança cibernética."
+    "desc": "🇮🇳 Indian company focused on cybersecurity solutions."
   },
   {
-    "title": "Programador Junior",
-    "company": "OWSE",
-    "time": "Apr - Aug / 2022",
-    "description": "🇧🇷 Empresa Brasileira desenvolvedora de softwares para outras empresas."
-  },
-  {
+    "time": "Jun — Nov 2022",
     "title": "Frontend Developer",
     "company": "Druim Inc",
-    "time": "Jun - Nov / 2022",
-    "description": "🇪🇪 Empresa da Estônia desenvolvedora de pequenas aplicações para diversas outras empresas."
+    "desc": "🇪🇪 Estonian company building applications for many other businesses."
   },
   {
-    "title": "Nuxt.js",
-    "company": "Bootcamp Cataline",
-    "time": "Jun - Jul / 2022",
-    "education": true,
-    "description": "Desenvolvimento do Frontend do Facebook em Nuxt.js."
-  },
-  {
-    "title": "Adonis.js",
-    "company": "Bootcamp Cataline",
-    "time": "May - Jun / 2022",
-    "education": true,
-    "description": "Desenvolvimento do Backend do Facebook em Adonis.js."
-  },
-  {
-    "title": "Node.js + JSON Server",
-    "company": "Bootcamp Cataline",
-    "time": "May - Jun / 2022",
-    "education": true,
-    "description": "Desenvolvimento de uma API REST em Node.js e JSON Server."
-  },
-  {
-    "title": "Nuxt.js + Atomic Design",
-    "company": "Bootcamp Cataline",
-    "time": "Apr - Jun / 2022",
-    "education": true,
-    "description": "Desenvolvimento de um site em Nuxt.js e Atomic Design."
-  },
-  {
-    "title": "Vue.js + Atomic Design",
-    "company": "Bootcamp Cataline",
-    "time": "Apr / 2022",
-    "education": true,
-    "description": "Desenvolvimento de uma landing page em Vue.js e Atomic Design."
-  },
-  {
-    "title": "Node.js",
-    "company": "Bootcamp Cataline",
-    "time": "Apr / 2022",
-    "education": true,
-    "description": "Desenvolvimento de um CRUD em Node.js."
-  },
-  {
-    "title": "Flutter",
-    "company": "Cod3r Cursos",
-    "time": "Apr / 2022",
-    "education": true,
-    "description": "Desenvolvimento de uma calculadora em Flutter."
-  },
-  {
-    "title": "Software Engineer",
+    "time": "2022 — 2023",
+    "title": "Postgrad in Software Engineering",
     "company": "PUC Minas",
-    "time": "Mar / 2022 - Jul / 2023",
-    "education": true,
-    "description": "Pós-graduação em Engenharia de Software. Estudos relacionados em Ciência da Computação, Matemática, Produção, Programação, Engenharia de Software, Tecnologias Modernas, Trabalho em Equipe e Comunicação, Interação Humano-Computador, Áreas de atuação, entre outros."
+    "desc": "Computer science, software engineering, HCI and modern technologies."
   },
   {
-    "title": "Programador Trainee II",
+    "time": "2021 — 2022",
+    "title": "Developer",
     "company": "OWSE",
-    "time": "Jan - Apr / 2022",
-    "description": "🇧🇷 Empresa Brasileira desenvolvedora de softwares para outras empresas."
-  },
-  {
-    "title": "Spring Boot",
-    "company": "Amigoscode",
-    "time": "Oct / 2021",
-    "education": true,
-    "description": "Curso de Spring Boot."
-  },
-  {
-    "title": "Node.js + Mongoose + MongoDB",
-    "company": "Guia do Programador",
-    "time": "Nov / 2021",
-    "education": true,
-    "description": "Curso de Node.js, Mongoose e MongoDB."
-  },
-  {
-    "title": "Node.js + Sequelize",
-    "company": "Guia do Programador",
-    "time": "Nov / 2021",
-    "education": true,
-    "description": "Desenvolvimento de um blog app em Node.js e Sequelize."
-  },
-  {
-    "title": "Java",
-    "company": "Digital Innovation One",
-    "time": "Oct / 2021",
-    "education": true,
-    "description": "Desenvolvimento avançado em Java"
-  },
-  {
-    "title": "Spring Boot + Vue",
-    "company": "",
-    "time": "Sep - Nov / 2021",
-    "education": true,
-    "description": "Curso de Spring Boot e Vue.js."
-  },
-  {
-    "title": "Java",
-    "company": "DevDojo",
-    "time": "Sep - Nov / 2021",
-    "education": true,
-    "description": "Maratona Java do DevDojo."
-  },
-  {
-    "title": "Java Collections e Stream",
-    "company": "Digital Innovation One",
-    "time": "Aug / 2021",
-    "education": true,
-    "description": "Implementando Collections e Streams com Java"
-  },
-  {
-    "title": "Spring Boot & MVC + Thymeleaf",
-    "company": "Udemy",
-    "time": "Aug / 2021",
-    "education": true,
-    "description": "Curso de Spring Boot & MVC com Thymeleaf."
-  },
-  {
-    "title": "Java",
-    "company": "Digital Innovation One",
-    "time": "Aug / 2021",
-    "education": true,
-    "description": "Desenvolvimento básico em Java"
-  },
-  {
-    "title": "Arquitetura de Sistemas",
-    "company": "Digital Innovation One",
-    "time": "Aug / 2021",
-    "education": true,
-    "description": "Fundamentos de Arquitetura de Sistemas."
-  },
-  {
-    "title": "Programador Trainee I",
-    "company": "OWSE",
-    "time": "Aug / 2021 - Jan / 2022",
-    "description": "🇧🇷 Empresa Brasileira desenvolvedora de softwares para outras empresas."
-  },
-  {
-    "title": "Git e GitHub",
-    "company": "Digital Innovation One",
-    "time": "Aug / 2021",
-    "education": true,
-    "description": "Introdução ao Git e ao GitHub"
-  },
-  {
-    "title": "Vue.js",
-    "company": "Digital Innovation One",
-    "time": "Aug / 2021",
-    "education": true,
-    "description": "Desenvolvendo sua primeira aplicação com Vue.js."
-  },
-  {
-    "title": "Vue.js",
-    "company": "Cod3r Cursos",
-    "time": "Aug / 2021",
-    "education": true,
-    "description": "Desenvolvimento de uma calculadora em Vue.js."
-  },
-  {
-    "title": "Lógica de Programação Essencial",
-    "company": "Digital Innovation One",
-    "time": "Aug / 2021",
-    "education": true,
-    "description": "Curso de Lógica de Programação Essencial."
-  },
-  {
-    "title": "Java POO",
-    "company": "Curso em Vídeo",
-    "time": "Jul / 2021",
-    "education": true,
-    "description": "Curso de Java POO do Gustavo Guanabara."
-  },
-  {
-    "title": "Web Designer",
-    "company": "JBI Advertising",
-    "time": "Jul - Aug / 2021",
-    "description": "🇬🇧 Empresa Britânica desenvolvedora de landing pages para diversas empresas."
-  },
-  {
-    "title": "⭐️ JavaScript Algorithms",
-    "company": "freeCodeCamp",
-    "time": "Jul - Aug / 2021",
-    "education": true,
-    "description": "Curso de JavaScript Algorithms and Data Structures do freeCodeCamp."
-  },
-  {
-    "title": "Java Básico",
-    "company": "Curso em Vídeo",
-    "time": "Jul / 2021",
-    "education": true,
-    "description": "Curso de Java Básico do Gustavo Guanabara."
-  },
-  {
-    "title": "Web Design",
-    "company": "Arcadia",
-    "time": "Jun / 2021 - Apr / 2023",
-    "description": "🇹🇷 Empresa Turca relacionada a artes e cultura por meio de blog. Trabalhei como voluntário."
-  },
-  {
-    "title": "⭐️ Responsive Web Design",
-    "company": "freeCodeCamp",
-    "time": "May - Jun / 2021",
-    "education": true,
-    "description": "Curso de Responsive Web Design do freeCodeCamp."
-  },
-  {
-    "title": "SCRUM Fundamentals",
-    "company": "SCRUMStudy",
-    "time": "May / 2021",
-    "education": true,
-    "description": "Curso de SCRUM Fundamentals Certified do SCRUMStudy."
-  },
-  {
-    "title": "Git e GitHub",
-    "company": "Curso em Vídeo",
-    "time": "Jan / 2021",
-    "education": true,
-    "description": "Curso de Git e GitHub do Gustavo Guanabara."
-  },
-  {
-    "title": "⭐️ Python",
-    "company": "Curso em Vídeo",
-    "time": "Apr - Jun / 2021",
-    "education": true,
-    "description": "Curso de Python do Gustavo Guanabara."
-  },
-  {
-    "title": "React + Next.js",
-    "company": "Rocketseat",
-    "time": "Fev / 2021",
-    "education": true,
-    "description": "Desenvolvimento de um Pomodoro em React e Next.js."
-  },
-  {
-    "title": "Web Developer",
-    "company": "Grupo AJL",
-    "time": "Jan - Jun / 2021",
-    "description": "🇧🇷 Empresa familiar. Trabalhei como voluntário."
-  },
-  {
-    "title": "⭐️ CS50",
-    "company": "Harvard University",
-    "time": "Jan - Mar / 2021",
-    "education": true,
-    "description": "Instrodução a Ciência da Computação. HTML, CSS, JavaScript, Python, SQL, Git, etc."
-  },
-  {
-    "title": "WordPress",
-    "company": "Curso em Vídeo",
-    "time": "Jan / 2021",
-    "education": true,
-    "description": "Curso de WordPress do Gustavo Guanabara."
-  },
-  {
-    "title": "MySQL",
-    "company": "Curso em Vídeo",
-    "time": "Nov / 2020",
-    "education": true,
-    "description": "Curso de MySQL do Gustavo Guanabara."
-  },
-  {
-    "title": "JavaScript",
-    "company": "Curso em Vídeo",
-    "time": "Sep - Nov / 2020",
-    "education": true,
-    "description": "Curso de JavaScript do Gustavo Guanabara."
-  },
-  {
-    "title": "HTML5",
-    "company": "Curso em Vídeo",
-    "time": "Jun - Sep / 2020",
-    "education": true,
-    "description": "Curso de HTML5 do Gustavo Guanabara."
+    "desc": "🇧🇷 From trainee to junior at a Brazilian custom-software company."
   }
 ]

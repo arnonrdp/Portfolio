@@ -1,0 +1,31 @@
+{
+  "bio": "I'm Brazilian 🇧🇷, a software engineer who loves solving problems with technology — calmly, with focus and clean code. Experienced in UX/UI, SEO and agile methodologies.",
+  "ctaContact": "Get in touch",
+  "ctaProjects": "View projects",
+  "ctLabel": "Contact",
+  "ctSub": "I'm always open to new projects, ideas and good conversations. Pick your favorite channel.",
+  "ctTitle": "Let's talk?",
+  "footer": "calmly made by Arnon Rodrigues",
+  "greet": "👋🏼 hi, my name is",
+  "moreTitle": "Other projects & studies",
+  "projLabel": "Projects",
+  "projSub": "Projects I built and maintain — from bots to full products.",
+  "projTitle": "Featured work",
+  "scroll": "scroll to explore",
+  "sections": [
+    { "id": "inicio", "label": "Home" },
+    { "id": "projetos", "label": "Projects" },
+    { "id": "skills", "label": "Stack" },
+    { "id": "jornada", "label": "Journey" },
+    { "id": "contato", "label": "Contact" }
+  ],
+  "skillsLabel": "Stack",
+  "skillsTitle": "Everyday tools",
+  "statFollowers": "GitHub followers",
+  "statRepos": "Public repositories",
+  "statYears": "Years coding",
+  "tagline": "I build things for the web and mobile.",
+  "tlLabel": "Journey",
+  "tlTitle": "Professional path",
+  "visit": "Visit website"
+}

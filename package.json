@@ -1,16 +1,16 @@
 {
   "name": "portfolio",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "translate": "node scripts/translate.mjs"
   },
   "dependencies": {
     "next": "^16.2.6",
-    "next-images": "^1.8.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "typescript": "^4.9.5"
@@ -21,7 +21,13 @@
     "@types/react-dom": "^18.0.5",
     "eslint": "8.18.0",
     "eslint-config-next": "12.1.6",
-    "typerscript": "^0.2.3",
-    "typestyle": "^1.5.1"
+    "google-translate-api-x": "^10.7.3"
+  },
+  "allowScripts": {
+    "core-js-pure@3.23.2": true,
+    "sharp@0.34.5": true
+  },
+  "overrides": {
+    "postcss": "^8.5.10"
   }
 }

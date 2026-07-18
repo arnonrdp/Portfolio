@@ -1,21 +1,21 @@
 {
-    "name": "Arnon Rodrigues de Paula Portfolio",
-    "short_name": "Arnon's Portfolio",
-    "description": "Portfolio, side projects and contact of Arnon Rodrigues de Paula",
-    "icons": [
-        {
-            "src": "/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone",
-    "start_url": "https://arnon.dev/"
+  "name": "arnon.dev — Arnon Rodrigues",
+  "short_name": "arnon.dev",
+  "description": "Arnon Rodrigues — software engineer building things for the web and mobile. Projects, stack, journey and contact.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0a1412",
+  "background_color": "#0a1412",
+  "display": "standalone",
+  "start_url": "https://arnon.dev/"
 }
