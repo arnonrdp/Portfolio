@@ -72,6 +72,13 @@ export default class MyDocument extends Document {
           />
 
           {/* Analytics */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSNN76QH38"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html:
+                "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FSNN76QH38')",
+            }}
+          />
           <script async src="https://cdn.splitbee.io/sb.js"></script>
         </Head>
         <body>
