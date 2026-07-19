@@ -1,2 +1,16 @@
 DirectoryIndex index.html index.php
 ErrorDocument 404 /404.html
+
+# Long-lived caching: JS/CSS/fonts are content-hashed by Next (safe to cache
+# forever); images change rarely (30 days).
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(jpg|jpeg|png|svg|ico|webp)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.(html|xml|txt)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
