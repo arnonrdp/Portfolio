@@ -7,6 +7,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: Production
+      url: https://arnon.dev
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
