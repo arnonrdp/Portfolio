@@ -8,6 +8,9 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          {/* The hero portrait is the LCP element; fetch it early and with priority. */}
+          <link rel="preload" href="/arnon-face.svg" as="image" type="image/svg+xml" fetchPriority="high" />
+
           {/* Theme / Favicon */}
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -71,12 +74,12 @@ export default class MyDocument extends Document {
             }}
           />
 
-          {/* Analytics */}
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSNN76QH38"></script>
+          {/* Analytics: gtag events queue in the dataLayer while the library
+              loads after `load`, keeping it out of the critical path. */}
           <script
             dangerouslySetInnerHTML={{
               __html:
-                "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FSNN76QH38')",
+                "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FSNN76QH38');window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-FSNN76QH38';document.head.appendChild(s)})",
             }}
           />
           <script async src="https://cdn.splitbee.io/sb.js"></script>
