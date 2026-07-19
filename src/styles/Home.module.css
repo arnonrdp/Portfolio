@@ -400,6 +400,9 @@
 
 .section {
   position: relative;
+  /* Local stacking context: lets the Journey map use z-index -1 without
+     falling behind .root's opaque background. */
+  isolation: isolate;
   overflow: hidden;
   padding: 110px 0;
   scroll-margin-top: 70px;
@@ -443,7 +446,7 @@
 }
 
 /* ===== Reveals =====
-   Delays por item via style={{ transitionDelay }} no JSX. */
+   Per-item delays come from style={{ transitionDelay }} in the JSX. */
 
 .rv {
   opacity: 0;
@@ -549,8 +552,8 @@
 
 .row {
   display: grid;
-  /* Coluna de links fixa (2 ícones de 18px + gap 12px) para que a descrição e
-     os ícones alinhem mesmo quando uma linha não tem link de GitHub. */
+  /* Fixed links column (2 18px icons + 12px gap) so descriptions and icons
+     stay aligned even when a row has no GitHub link. */
   grid-template-columns: 1fr 2fr 48px;
   gap: 12px;
   align-items: center;
@@ -660,6 +663,83 @@
 }
 
 /* ===== Jornada ===== */
+
+/* The map section keeps overflow visible so the map can bleed to the viewport
+   edge; the watermark gets its clipping back through .wmClip. */
+.mapSection {
+  overflow: visible;
+}
+
+.wmClip {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Decorative background map: the dots come from public/map-dots.svg used as a
+   CSS mask (color follows the theme via --mut); the pins live in a separate
+   layer ABOVE the text — on the back layer the timeline block would intercept
+   hover on the left-half pins. Mask `contain` and svg `meet` center the same
+   way, so the box can have any aspect ratio without misaligning the layers.
+   .mapTrack is a full-height rail; the .mapSticky box inside it sticks below
+   the header and follows the scroll until the section ends. */
+.mapTrack {
+  position: absolute;
+  top: 200px;
+  bottom: 0;
+  left: 30%;
+  /* Bleeds exactly to the viewport's right edge (container gap + padding). */
+  right: calc((min(100vw, 1160px) - 100vw) / 2 - 32px);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.2s ease 0.25s;
+}
+
+.mapSticky {
+  position: sticky;
+  top: 90px;
+  height: calc(100vh - 130px);
+  max-height: 100%;
+}
+
+.map {
+  z-index: -1;
+}
+
+/* Above the .tlItem elements (position: relative) so hover also reaches the
+   pins under the timeline column. */
+.mapPinsLayer {
+  z-index: 1;
+}
+
+.mapDots {
+  position: absolute;
+  inset: 0;
+  background: var(--mut);
+  opacity: 0.4;
+  -webkit-mask: url(/map-dots.svg) center / contain no-repeat;
+  mask: url(/map-dots.svg) center / contain no-repeat;
+}
+
+.mapPins {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.mapPin {
+  pointer-events: auto;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+.mapPin:hover {
+  transform: scale(1.3);
+}
 
 .tl {
   border-left: 1.5px solid var(--line);
@@ -774,7 +854,7 @@
   margin: 0;
 }
 
-/* ===== Estado revelado (depois das classes-base para vencer o cascade) ===== */
+/* ===== Revealed state (after the base classes to win the cascade) ===== */
 
 .on {
   opacity: 1;
@@ -782,7 +862,7 @@
   filter: none;
 }
 
-/* ===== Responsivo (adição ao protótipo, que não define breakpoints) ===== */
+/* ===== Responsive ===== */
 
 @media (max-width: 900px) {
   .hero {
@@ -796,6 +876,10 @@
   }
 
   .dots {
+    display: none;
+  }
+
+  .mapTrack {
     display: none;
   }
 }

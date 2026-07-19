@@ -9,8 +9,8 @@
   --accent2: #96c93d;
   --glow: rgba(0, 196, 167, 0.16);
   --mono: invert(0.88) sepia(0.08) hue-rotate(100deg);
-  /* Versões "ink" dos accents para texto pequeno: no dark são iguais aos tokens
-     da spec; no light são escurecidas para cumprir contraste WCAG AA (4.5:1). */
+  /* "Ink" variants of the accents for small text: same as the spec tokens in
+     dark; darkened in light to meet WCAG AA contrast (4.5:1). */
   --accent-ink: var(--accent);
   --accent2-ink: var(--accent2);
 }
@@ -40,6 +40,10 @@ button {
 
 html {
   scroll-behavior: smooth;
+  /* 100vw includes the scrollbar; full-bleed elements (Journey map) must not
+     create horizontal scroll. On html (not body) to avoid creating a scroll
+     container that would break position: sticky. */
+  overflow-x: clip;
 }
 
 body {

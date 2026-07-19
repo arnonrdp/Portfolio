@@ -1,44 +1,113 @@
 [
   {
-    "time": "Oct 2023 — Present",
-    "title": "Software Engineer",
+    "city": "Jupiter, USA",
     "company": "FincenFetch",
-    "desc": "Leading frontend development across FincenFetch products, including FetchInsights, TurboCTA, FinCENRealEstateReport, and FIRPTAfox — platforms that automate regulatory reporting, real estate compliance, FIRPTA workflows, and practice growth."
+    "desc": "🇺🇸 Leading frontend development of FincenFetch's regulatory reporting and compliance platforms.",
+    "lat": 26.9342,
+    "lng": -80.0942,
+    "time": "Oct 2023 — Present",
+    "title": "Software Engineer"
   },
   {
-    "time": "Aug 2023 — Jul 2024",
-    "title": "Freelancer",
+    "city": "Athens, Greece",
     "company": "Hellenic Technologies",
-    "desc": "Development of Feedel.app, delivering solutions to eBay resellers."
+    "desc": "🇬🇷 Development of Feedel.app, delivering solutions to eBay resellers.",
+    "lat": 37.9838,
+    "lng": 23.7275,
+    "time": "Aug 2023 — Jul 2024",
+    "title": "Freelancer"
   },
   {
-    "time": "Oct 2022 — Mar 2025",
-    "title": "Lead Developer",
+    "city": "Ottawa, Canada",
     "company": "Globe & Citizen",
-    "desc": "🇨🇦 Canadian startup building privacy and security solutions for end users."
+    "desc": "🇨🇦 Canadian startup building privacy and security solutions for end users.",
+    "lat": 45.4215,
+    "lng": -75.6972,
+    "time": "Oct 2022 — Mar 2025",
+    "title": "Lead Developer"
   },
   {
-    "time": "Jul 2022 — Dec 2023",
-    "title": "Software Engineer",
+    "city": "Bangalore, India",
     "company": "we45",
-    "desc": "🇮🇳 Indian company focused on cybersecurity solutions."
+    "desc": "🇮🇳 Indian company focused on cybersecurity solutions.",
+    "lat": 12.9716,
+    "lng": 77.5946,
+    "time": "Jul 2022 — Dec 2023",
+    "title": "Software Engineer"
   },
   {
-    "time": "Jun — Nov 2022",
-    "title": "Frontend Developer",
+    "city": "Tallinn, Estonia",
     "company": "Druim Inc",
-    "desc": "🇪🇪 Estonian company building applications for many other businesses."
+    "desc": "🇪🇪 Estonian company building applications for many other businesses.",
+    "lat": 59.437,
+    "lng": 24.7536,
+    "time": "Jun — Nov 2022",
+    "title": "Frontend Developer"
   },
   {
-    "time": "2022 — 2023",
-    "title": "Postgrad in Software Engineering",
+    "city": "Belo Horizonte, Brazil",
     "company": "PUC Minas",
-    "desc": "Computer science, software engineering, HCI and modern technologies."
+    "desc": "🇧🇷 Computer science, software engineering, HCI and modern technologies.",
+    "education": true,
+    "lat": -19.9167,
+    "lng": -43.9345,
+    "time": "2022 — 2023",
+    "title": "Postgrad in Software Engineering"
   },
   {
-    "time": "2021 — 2022",
-    "title": "Developer",
+    "city": "Rio de Janeiro, Brazil",
     "company": "OWSE",
-    "desc": "🇧🇷 From trainee to junior at a Brazilian custom-software company."
+    "desc": "🇧🇷 From trainee to junior at a Brazilian custom-software company.",
+    "lat": -22.9068,
+    "lng": -43.1729,
+    "time": "Aug 2021 — Aug 2022",
+    "title": "Developer"
+  },
+  {
+    "city": "London, UK",
+    "company": "JBI Advertising",
+    "desc": "🇬🇧 Websites, landing pages and logos for marketing campaigns and local businesses.",
+    "lat": 51.5074,
+    "lng": -0.1278,
+    "time": "Jul — Aug 2021",
+    "title": "Web Designer"
+  },
+  {
+    "city": "Ankara, Turkey",
+    "company": "Arcadia",
+    "desc": "🇹🇷 Arts and culture platform — a utopia for people interested in every aspect of art.",
+    "lat": 39.9334,
+    "lng": 32.8597,
+    "time": "Jun 2021 — Apr 2023",
+    "title": "Chief Technology Officer"
+  },
+  {
+    "city": "Lages, Brazil",
+    "company": "Unifacvest",
+    "desc": "🇧🇷 Databases, statistics, OOP, mobile development, compilers, computer architecture and AI.",
+    "education": true,
+    "lat": -27.8154,
+    "lng": -50.3258,
+    "time": "Jan 2021 — Dec 2024",
+    "title": "BS in Computer Science"
+  },
+  {
+    "city": "Cambridge, USA",
+    "company": "Harvard University",
+    "desc": "🇺🇸 C, algorithms, memory, data structures, Python, SQL and web. Grade: 98.875.",
+    "education": true,
+    "lat": 42.3736,
+    "lng": -71.1097,
+    "time": "Jan — Mar 2021",
+    "title": "CS50: Introduction to Computer Science"
+  },
+  {
+    "city": "Rio de Janeiro, Brazil",
+    "company": "Grupo AJL",
+    "desc": "🇧🇷 Front-end development of all AJL Group websites.",
+    "lat": -22.9068,
+    "lng": -43.1729,
+    "time": "Jul 2020 — Jun 2021",
+    "title": "Developer"
   }
 ]

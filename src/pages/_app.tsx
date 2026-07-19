@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>arnon.dev</title>
+        <title>Arnon Rodrigues — Software Engineer · arnon.dev</title>
       </Head>
       <div className={spaceGrotesk.className}>
         <Component {...pageProps} />

@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 export function MeditatingAvatar({ tilt }: { tilt: number }) {
   return (
     <div className={styles.avatarWrap} style={{ transform: `rotate(${tilt}deg)` }}>
-      <svg viewBox="0 0 360 400" width="100%" className={styles.avatar} role="img" aria-label="Arnon meditando">
+      <svg viewBox="0 0 360 400" width="100%" className={styles.avatar} role="img" aria-label="Arnon meditating">
         <circle cx={180} cy={180} r={152} fill="none" stroke="var(--accent)" strokeWidth={1.5} opacity={0.2} className={styles.aura} />
         <circle
           cx={180}

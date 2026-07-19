@@ -5,15 +5,34 @@
       "title": "LivroLog",
       "github": "https://github.com/arnonrdp/LivroLog",
       "website": "https://livrolog.com/",
-      "techs": ["Vue", "Quasar", "Firebase"],
+      "techs": [
+        "Vue",
+        "Laravel",
+        "MySQL"
+      ],
       "desc": "A virtual bookshelf with books you've read and books you want to read."
+    },
+    {
+      "image": "/portfolio/experience-joao-fernandes.jpg",
+      "title": "Hotel Experience João Fernandes",
+      "website": "https://experiencejoaofernandes.com.br/",
+      "techs": [
+        "WordPress",
+        "PHP",
+        "MySQL"
+      ],
+      "desc": "Website for a beachside hotel in Búzios — bookings, rooms and multilingual content."
     },
     {
       "image": "/portfolio/brasileiro-ninja.jpg",
       "title": "Brasileiro Ninja",
       "github": "https://github.com/arnonrdp/Brasileiro-Ninja",
       "website": "https://brasileiro.ninja",
-      "techs": ["Vue", "JavaScript", "Chart.js"],
+      "techs": [
+        "Vue",
+        "JavaScript",
+        "Chart.js"
+      ],
       "desc": "Live data and charts for the Brazilian football league."
     },
     {
@@ -21,22 +40,21 @@
       "title": "Bot Deschamps Newsletter",
       "github": "https://github.com/arnonrdp/Bot-Deschamps-Newsletter",
       "website": "https://twitter.com/BotDeschamps",
-      "techs": ["Python"],
+      "techs": [
+        "Python"
+      ],
       "desc": "A bot that reads Filipe Deschamps' newsletter and turns each news item into a tweet."
-    },
-    {
-      "image": "/portfolio/myoption.jpg",
-      "title": "My Option",
-      "website": "http://myoption.com.br",
-      "techs": ["jQuery", "Bootstrap", "PHP", "MySQL"],
-      "desc": "A single-page app for tracking all stock options in the Brazilian financial market."
     },
     {
       "image": "/portfolio/multi-converter.jpg",
       "title": "Multi Converter",
       "github": "https://github.com/arnonrdp/Multi-Converter",
       "website": "https://multi-converter.vercel.app",
-      "techs": ["Vue", "JavaScript", "Vercel"],
+      "techs": [
+        "Vue",
+        "JavaScript",
+        "Vercel"
+      ],
       "desc": "A multiple temperature, length and time converter."
     },
     {
@@ -44,7 +62,11 @@
       "title": "QRCode Generator",
       "github": "https://github.com/arnonrdp/QRCode-Generator",
       "website": "https://codeqr.vercel.app",
-      "techs": ["Vue", "CSS", "Vercel"],
+      "techs": [
+        "Vue",
+        "CSS",
+        "Vercel"
+      ],
       "desc": "A real-time QRCode generator. Type, wait and see."
     }
   ],

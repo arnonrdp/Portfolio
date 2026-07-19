@@ -5,7 +5,7 @@ on:
     branches: ['main']
   workflow_dispatch:
 
-# Nunca rodar dois syncs FTP ao mesmo tempo — corrompe o estado do deploy.
+# Never run two FTP syncs at once — it corrupts the deploy state.
 concurrency:
   group: deploy
   cancel-in-progress: true
@@ -18,12 +18,12 @@ jobs:
       url: https://arnon.dev
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version: 24
           cache: npm
 
       - name: Install dependencies
@@ -33,11 +33,11 @@ jobs:
         run: npm run build
 
       - name: Deploy to Hostinger (FTP)
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: out/
-          # O home do usuário FTP da Hostinger já é o public_html do site.
+          # The Hostinger FTP user's home is already the site's public_html.
           server-dir: ./

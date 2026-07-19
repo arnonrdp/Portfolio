@@ -57,8 +57,11 @@ export default class MyDocument extends Document {
                 "@type": "Person",
                 name: "Arnon Rodrigues",
                 url: "https://arnon.dev/",
+                image: "https://arnon.dev/portfolio/personal-portfolio.jpg",
                 jobTitle: "Software Engineer",
+                worksFor: { "@type": "Organization", name: "FincenFetch" },
                 email: "mailto:me@arnon.dev",
+                knowsLanguage: ["pt", "en"],
                 sameAs: [
                   "https://github.com/arnonrdp",
                   "https://linkedin.com/in/arnonrdp",

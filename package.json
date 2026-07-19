@@ -3,25 +3,29 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
+    "predev": "npm run map",
     "dev": "next dev",
+    "prebuild": "npm run map",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
+    "map": "node scripts/generate-map.mjs",
     "translate": "node scripts/translate.mjs"
   },
   "dependencies": {
-    "next": "^16.2.6",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "typescript": "^4.9.5"
+    "next": "^16.2.10",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
   },
   "devDependencies": {
-    "@types/node": "^18.0.0",
-    "@types/react": "^18.0.14",
-    "@types/react-dom": "^18.0.5",
-    "eslint": "8.18.0",
-    "eslint-config-next": "12.1.6",
-    "google-translate-api-x": "^10.7.3"
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "dotted-map": "^3.1.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.2.10",
+    "google-translate-api-x": "^10.7.3",
+    "typescript": "^5.9.3"
   },
   "allowScripts": {
     "core-js-pure@3.23.2": true,

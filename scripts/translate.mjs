@@ -1,16 +1,16 @@
-// Preenche src/data/translations.json (EN → cada idioma de TARGETS) apenas com
-// as strings que ainda não estão no cache. Rodar com `npm run translate` sempre
-// que textos novos entrarem nos JSONs de dados. Correções manuais no
-// translations.json são preservadas. Para oferecer um idioma novo no site,
-// basta adicioná-lo em TARGETS e rodar o script.
-// ponytail: usa endpoint gratuito do Google Translate (google-translate-api-x),
-// sem chave; se quebrar ou precisar de CI, migrar para @google-cloud/translate.
+// Fills src/data/translations.json (EN → each language in TARGETS) with the
+// strings that are not cached yet. Run `npm run translate` whenever new texts
+// land in the data JSONs. Manual corrections in translations.json are never
+// overwritten. To offer a new language on the site, add its code to TARGETS
+// and run the script.
+// Uses the free Google Translate endpoint (google-translate-api-x), no API
+// key; if it breaks or CI needs it, switch to @google-cloud/translate.
 import { readFileSync, writeFileSync } from "node:fs";
 import translate from "google-translate-api-x";
 
 const TARGETS = ["pt", "es", "fr", "de", "it", "ja", "zh-CN"];
 
-// Termos que não devem ser traduzidos em nenhum idioma.
+// Terms that must stay untranslated in every language.
 const KEEP = ["Stack"];
 
 const read = (p) => JSON.parse(readFileSync(new URL(p, import.meta.url), "utf8"));
@@ -41,7 +41,7 @@ for (const target of TARGETS) {
   for (const term of KEEP) if (strings.has(term) && !table[term]) table[term] = term;
   const missing = [...strings].filter((s) => !table[s]);
   if (missing.length === 0) {
-    console.log(`${target}: completo.`);
+    console.log(`${target}: up to date.`);
     continue;
   }
   try {
@@ -50,11 +50,11 @@ for (const target of TARGETS) {
       table[text] = results[i].text;
     });
     translated += missing.length;
-    console.log(`${target}: ${missing.length} string(s) traduzida(s).`);
+    console.log(`${target}: ${missing.length} string(s) translated.`);
   } catch (error) {
-    console.error(`${target}: falhou (${error.message}) — rode novamente mais tarde.`);
+    console.error(`${target}: failed (${error.message}) — try again later.`);
   }
 }
 
 writeFileSync(outURL, JSON.stringify(translations, null, 2) + "\n");
-if (translated > 0) console.log(`\nTotal: ${translated}. Revise src/data/translations.json e corrija à mão se necessário.`);
+if (translated > 0) console.log(`\nTotal: ${translated}. Review src/data/translations.json and fix by hand if needed.`);

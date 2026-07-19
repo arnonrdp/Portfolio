@@ -1,16 +1,18 @@
 [
   "Vue",
+  "Typescript",
+  "Quasar",
+  "Sass",
+  "CSS",
+  "Laravel",
+  "MySQL",
   "React",
+  "JavaScript",
+  "PHP",
   "NextJS",
   "Nuxt",
-  "Typescript",
-  "JavaScript",
   "Node",
   "Python",
   "Firebase",
-  "Quasar",
-  "MySQL",
-  "MongoDB",
-  "Sass",
-  "CSS"
+  "MongoDB"
 ]
