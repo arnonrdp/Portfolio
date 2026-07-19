@@ -3,6 +3,12 @@ name: Deploy
 on:
   push:
     branches: ['main']
+  workflow_dispatch:
+
+# Nunca rodar dois syncs FTP ao mesmo tempo — corrompe o estado do deploy.
+concurrency:
+  group: deploy
+  cancel-in-progress: true
 
 jobs:
   deploy:
