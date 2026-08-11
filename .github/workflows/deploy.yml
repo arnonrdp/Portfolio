@@ -9,9 +9,11 @@ permissions:
   contents: read
 
 # Never run two FTP syncs at once — it corrupts the deploy state.
+# Queue instead of cancelling: aborting a sync mid-upload leaves partial files
+# on the server and trips Hostinger's anti-brute-force block on the runner IP.
 concurrency:
   group: deploy
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
