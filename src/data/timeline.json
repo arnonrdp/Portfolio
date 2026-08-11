@@ -109,5 +109,11 @@
     "lng": -43.1729,
     "time": "Jul 2020 — Jun 2021",
     "title": "Developer"
+  },
+  {
+    "company": "Personal Projects",
+    "desc": "🇧🇷 First lines of code, self-taught: small tools built to solve my own everyday problems.",
+    "time": "Mar 2017 — Jul 2020",
+    "title": "Self-taught Developer"
   }
 ]
