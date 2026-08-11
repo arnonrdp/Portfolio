@@ -420,6 +420,11 @@
   pointer-events: none;
   user-select: none;
   letter-spacing: -0.04em;
+  /* Parallax driven by --wm, set on the parent section on scroll. The
+     transition smooths the per-frame steps into a trailing glide. */
+  transform: translateX(var(--wm, 0px));
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
 }
 
 .kicker {

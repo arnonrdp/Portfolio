@@ -65,6 +65,9 @@ const SECTION_IDS = ['inicio', 'projetos', 'skills', 'jornada', 'contato']
 
 const clamp = (min: number, max: number, v: number) => Math.max(min, Math.min(max, v))
 
+// Coding since 2017-03-21 (GitHub account creation).
+const years = Math.floor((Date.now() - Date.parse('2017-03-21')) / 31557600000)
+
 const langName = (code: string) => {
   try {
     const name = new Intl.DisplayNames([code], { type: 'language' }).of(code)
@@ -81,7 +84,6 @@ export default function Home() {
   const [active, setActive] = useState('inicio')
   const [heroP, setHeroP] = useState(0)
   const [revealed, setRevealed] = useState<Record<string, boolean>>({})
-  const [wm, setWm] = useState<Record<string, number>>({})
   const [tilt, setTilt] = useState(0)
   const [gh, setGh] = useState<{ repos: string | number; followers: string | number }>({ repos: '30+', followers: '—' })
   const charRef = useRef<HTMLDivElement>(null)
@@ -116,7 +118,6 @@ export default function Home() {
         setHeroP(clamp(0, 1, Math.round((window.scrollY / (vh * 0.85)) * 50) / 50))
 
         let current = 'inicio'
-        const nextWm: Record<string, number> = {}
         const nextRev: Record<string, boolean> = {}
         for (const id of SECTION_IDS) {
           const el = document.getElementById(id)
@@ -124,11 +125,13 @@ export default function Home() {
           const rect = el.getBoundingClientRect()
           if (rect.top < vh * 0.4) current = id
           if (id !== 'inicio' && rect.top < vh * 0.78) nextRev[id] = true
+          // Watermark parallax: written straight to the DOM as a CSS variable
+          // (inherited by .wm) so it stays a continuous value — going through
+          // React state would force a re-render of the whole page per frame.
           const rel = clamp(-1, 1, (rect.top + rect.height / 2 - vh / 2) / (vh + rect.height / 2))
-          nextWm[id] = Math.round((rel * -100) / 5) * 5
+          el.style.setProperty('--wm', `${(rel * -100).toFixed(2)}px`)
         }
         setActive(current)
-        setWm((prev) => (SECTION_IDS.some((id) => prev[id] !== nextWm[id]) ? nextWm : prev))
         setRevealed((prev) => (Object.keys(nextRev).some((id) => !prev[id]) ? { ...prev, ...nextRev } : prev))
       })
     }
@@ -184,8 +187,6 @@ export default function Home() {
   // translations.json is an EN → language cache filled by `npm run translate`.
   const table = translations[lang]
   const tr = (text: string) => (table && table[text]) || text
-  // Coding since 2017-03-21 (GitHub account creation).
-  const years = Math.floor((Date.now() - Date.parse('2017-03-21')) / 31557600000)
   const heroOp = Math.max(0, Math.round((1 - heroP * 1.1) * 100) / 100)
   const on = (id: string) => (revealed[id] ? ` ${s.on}` : '')
 
@@ -296,7 +297,7 @@ export default function Home() {
         </section>
 
         <section id="projetos" className={s.section}>
-          <div className={s.wm} style={{ transform: `translateX(${wm.projetos || 0}px)` }} aria-hidden>
+          <div className={s.wm} aria-hidden>
             01
           </div>
           <div className={s.rvY + on('projetos')}>
@@ -364,7 +365,7 @@ export default function Home() {
         </section>
 
         <section id="skills" className={s.section}>
-          <div className={s.wm} style={{ transform: `translateX(${wm.skills || 0}px)` }} aria-hidden>
+          <div className={s.wm} aria-hidden>
             02
           </div>
           <div className={s.rvY + on('skills')}>
@@ -400,7 +401,7 @@ export default function Home() {
 
         <section id="jornada" className={`${s.section} ${s.mapSection}`}>
           <div className={s.wmClip} aria-hidden>
-            <div className={s.wm} style={{ transform: `translateX(${wm.jornada || 0}px)` }}>
+            <div className={s.wm}>
               03
             </div>
           </div>
@@ -446,7 +447,7 @@ export default function Home() {
         </section>
 
         <section id="contato" className={s.section}>
-          <div className={s.wm} style={{ transform: `translateX(${wm.contato || 0}px)` }} aria-hidden>
+          <div className={s.wm} aria-hidden>
             04
           </div>
           <div className={s.contactWrap + on('contato')}>
