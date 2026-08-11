@@ -5,6 +5,9 @@ on:
     branches: ['main']
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 # Never run two FTP syncs at once — it corrupts the deploy state.
 concurrency:
   group: deploy
