@@ -3,16 +3,9 @@
   "description": "Arnon Rodrigues — software engineer building things for the web and mobile. Projects, stack, journey and contact.",
   "display": "standalone",
   "icons": [
-    {
-      "sizes": "192x192",
-      "src": "/android-chrome-192x192.png",
-      "type": "image/png"
-    },
-    {
-      "sizes": "512x512",
-      "src": "/android-chrome-512x512.png",
-      "type": "image/png"
-    }
+    { "sizes": "192x192", "src": "/android-chrome-192x192.png", "type": "image/png" },
+    { "sizes": "512x512", "src": "/android-chrome-512x512.png", "type": "image/png" },
+    { "purpose": "maskable", "sizes": "512x512", "src": "/maskable-512x512.png", "type": "image/png" }
   ],
   "id": "/",
   "name": "arnon.dev — Arnon Rodrigues",
