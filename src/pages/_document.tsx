@@ -87,7 +87,6 @@ export default class MyDocument extends Document {
                 "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FSNN76QH38');window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-FSNN76QH38';document.head.appendChild(s)})",
             }}
           />
-          <script async src="https://cdn.splitbee.io/sb.js"></script>
         </Head>
         <body>
           <Main />
