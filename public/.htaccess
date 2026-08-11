@@ -20,6 +20,11 @@ DirectoryIndex index.html index.php
   RewriteRule ^ / [R=302,L]
 </IfModule>
 
+# Not in Apache's default mime.types, and the PWA manifest needs a real type.
+<IfModule mod_mime.c>
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
 # Long-lived caching: JS/CSS/fonts are content-hashed by Next (safe to cache
 # forever); images change rarely (30 days).
 <IfModule mod_headers.c>
@@ -32,4 +37,10 @@ DirectoryIndex index.html index.php
   <FilesMatch "\.(html|xml|txt)$">
     Header set Cache-Control "public, max-age=0, must-revalidate"
   </FilesMatch>
+
+  # Last, so it overrides the .js rule above: the service worker is not
+  # content-hashed, and caching it would keep an old one alive after a deploy.
+  <Files "sw.js">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </Files>
 </IfModule>

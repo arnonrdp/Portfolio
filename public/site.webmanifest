@@ -1,21 +1,23 @@
 {
-  "name": "arnon.dev — Arnon Rodrigues",
-  "short_name": "arnon.dev",
+  "background_color": "#0a1412",
   "description": "Arnon Rodrigues — software engineer building things for the web and mobile. Projects, stack, journey and contact.",
+  "display": "standalone",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
+      "src": "/android-chrome-192x192.png",
       "type": "image/png"
     },
     {
-      "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
+      "src": "/android-chrome-512x512.png",
       "type": "image/png"
     }
   ],
-  "theme_color": "#0a1412",
-  "background_color": "#0a1412",
-  "display": "standalone",
-  "start_url": "https://arnon.dev/"
+  "id": "/",
+  "name": "arnon.dev — Arnon Rodrigues",
+  "scope": "/",
+  "short_name": "arnon.dev",
+  "start_url": "/",
+  "theme_color": "#0a1412"
 }

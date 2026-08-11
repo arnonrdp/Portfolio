@@ -19,6 +19,12 @@ export default class MyDocument extends Document {
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00c4a7" />
           <meta name="msapplication-TileColor" content="#0a1412" />
           <meta name="theme-color" content="#0a1412" />
+
+          {/* Installed-app appearance on iOS, which ignores the manifest. */}
+          <meta name="mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+          <meta name="apple-mobile-web-app-title" content="arnon.dev" />
           <script
             dangerouslySetInnerHTML={{
               __html:
