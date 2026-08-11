@@ -184,7 +184,8 @@ export default function Home() {
   // translations.json is an EN → language cache filled by `npm run translate`.
   const table = translations[lang]
   const tr = (text: string) => (table && table[text]) || text
-  const years = new Date().getFullYear() - 2020 + '+'
+  // Coding since 2017-03-21 (GitHub account creation).
+  const years = Math.floor((Date.now() - Date.parse('2017-03-21')) / 31557600000)
   const heroOp = Math.max(0, Math.round((1 - heroP * 1.1) * 100) / 100)
   const on = (id: string) => (revealed[id] ? ` ${s.on}` : '')
 
