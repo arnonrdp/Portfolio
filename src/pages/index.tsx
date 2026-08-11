@@ -85,6 +85,7 @@ export default function Home() {
   const [heroP, setHeroP] = useState(0)
   const [revealed, setRevealed] = useState<Record<string, boolean>>({})
   const [tilt, setTilt] = useState(0)
+  const [tip, setTip] = useState<{ city: string; color: string; x: number; y: number } | null>(null)
   const [gh, setGh] = useState<{ repos: string | number; followers: string | number }>({ repos: '30+', followers: '—' })
   const charRef = useRef<HTMLDivElement>(null)
   const themeMounted = useRef(false)
@@ -413,21 +414,34 @@ export default function Home() {
           <div className={`${s.mapTrack} ${s.mapPinsLayer}` + on('jornada')} aria-hidden>
             <div className={s.mapSticky}>
               <svg viewBox={`0 0 ${map.width} ${map.height}`} className={s.mapPins}>
-                {map.pins.map((pin) => (
-                  <circle
-                    key={pin.city}
-                    cx={pin.x}
-                    cy={pin.y}
-                    r={0.7}
-                    fill={pin.education ? 'var(--accent2)' : 'var(--accent)'}
-                    className={s.mapPin}
-                  >
-                    <title>{pin.city}</title>
-                  </circle>
-                ))}
+                {map.pins.map((pin) => {
+                  const color = pin.education ? 'var(--accent2)' : 'var(--accent)'
+                  return (
+                    <circle
+                      key={pin.city}
+                      cx={pin.x}
+                      cy={pin.y}
+                      r={0.7}
+                      fill={color}
+                      className={s.mapPin}
+                      onMouseEnter={(e) => {
+                        // Screen coords of the pin itself: the SVG is scaled and
+                        // letterboxed, so viewBox units would not line up.
+                        const r = e.currentTarget.getBoundingClientRect()
+                        setTip({ city: pin.city, color, x: r.left + r.width / 2, y: r.top })
+                      }}
+                      onMouseLeave={() => setTip(null)}
+                    />
+                  )
+                })}
               </svg>
             </div>
           </div>
+          {tip && (
+            <div className={s.mapTip} style={{ left: tip.x, top: tip.y, borderColor: tip.color }}>
+              {tip.city}
+            </div>
+          )}
           <div className={s.rvY + on('jornada')}>
             <p className={s.kicker}>03 — {tr(dict.tlLabel)}</p>
             <h2 className={s.h2sec}>{tr(dict.tlTitle)}</h2>

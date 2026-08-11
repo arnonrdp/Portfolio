@@ -746,6 +746,35 @@
   transform: scale(1.3);
 }
 
+/* Replaces the SVG <title> the pins used to carry: that was an OS tooltip,
+   with a ~1s delay and no theming. Fixed positioning is safe here because
+   .mapSticky keeps the pins still on screen while the section scrolls.
+   The border picks up the pin's own colour (work vs education). */
+.mapTip {
+  position: fixed;
+  z-index: 5;
+  transform: translate(-50%, -100%) translateY(-10px);
+  padding: 5px 12px;
+  border: 1px solid;
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.28);
+  animation: tipIn 0.16s ease-out;
+}
+
+@keyframes tipIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -100%) translateY(-2px);
+  }
+}
+
 .tl {
   border-left: 1.5px solid var(--line);
   padding-left: 28px;
