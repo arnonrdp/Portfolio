@@ -1,5 +1,24 @@
 DirectoryIndex index.html index.php
-ErrorDocument 404 /404.html
+
+# Single-page site: anything other than / is a typo or a stale link, so it goes
+# home instead of reaching Next's generated 404.html. Real files (sitemap.xml,
+# robots.txt, the images, the /_next assets) fall through the conditions below
+# and are served untouched.
+# 302 and not 301: a permanent redirect sticks in visitors' browser caches, and
+# would keep sending them home even after a second route exists.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 404.html still ships with the export; it should not be reachable on its own.
+  RewriteRule ^404\.html$ / [R=302,L]
+
+  # Not a real file, and not a folder holding an index.html. Testing for the
+  # index instead of plain -d matters: /icons/ and /portfolio/ are real folders
+  # with no index of their own, and -d would hand them to the server's 404.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME}/index.html !-f
+  RewriteRule ^ / [R=302,L]
+</IfModule>
 
 # Long-lived caching: JS/CSS/fonts are content-hashed by Next (safe to cache
 # forever); images change rarely (30 days).
